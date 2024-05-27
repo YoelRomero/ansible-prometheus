@@ -1,0 +1,1802 @@
+2024-05-25 13:15:49,671 p=5114 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 13:15:49,687 p=5114 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 13:15:50,068 p=5114 u=aizak n=ansible | fatal: [myserver]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: tester@158.160.150.119: Permission denied (publickey).", "unreachable": true}
+2024-05-25 13:15:50,071 p=5114 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 13:15:50,072 p=5114 u=aizak n=ansible | myserver                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-25 13:17:38,695 p=5161 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 13:17:38,712 p=5161 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 13:17:40,665 p=5161 u=aizak n=ansible | ok: [myserver]
+2024-05-25 13:17:40,692 p=5161 u=aizak n=ansible | TASK [Add repository] **********************************************************************************************
+2024-05-25 13:17:41,458 p=5161 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Repo directory '/etc/yum.repos.d' does not exist."}
+2024-05-25 13:17:41,460 p=5161 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 13:17:41,460 p=5161 u=aizak n=ansible | myserver                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 13:24:34,013 p=5295 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 13:24:34,028 p=5295 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 13:24:36,002 p=5295 u=aizak n=ansible | ok: [myserver]
+2024-05-25 13:24:36,028 p=5295 u=aizak n=ansible | TASK [Add repository] **********************************************************************************************
+2024-05-25 13:25:09,564 p=5295 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: E:The repository 'https://mirror.yandex.ru/epel/9/Everything/x86_64 bookworm Release' does not have a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'https://apt.releases.hashicorp.com bookworm Release' does not have a Release file."}
+2024-05-25 13:25:09,568 p=5295 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 13:25:09,569 p=5295 u=aizak n=ansible | myserver                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 13:26:18,074 p=5356 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 13:26:18,089 p=5356 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 13:26:20,806 p=5356 u=aizak n=ansible | ok: [myserver]
+2024-05-25 13:26:20,833 p=5356 u=aizak n=ansible | TASK [Add repository] **********************************************************************************************
+2024-05-25 13:27:02,933 p=5356 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: E:The repository 'https://apt.releases.hashicorp.com bookworm Release' does not have a Release file."}
+2024-05-25 13:27:02,937 p=5356 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 13:27:02,938 p=5356 u=aizak n=ansible | myserver                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:00:46,045 p=5874 u=aizak n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/home/aizak/sre_ansible/main.yml': line 5, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+tasks:
+^ here
+
+2024-05-25 14:01:39,966 p=5890 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:01:39,985 p=5890 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:01:41,979 p=5890 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:01:42,002 p=5890 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:02:18,734 p=5890 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: E:The repository 'https://apt.releases.hashicorp.com bookworm Release' does not have a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'https://packagecloud.io/prometheus-deb/release/debian stretch Release' does not have a Release file."}
+2024-05-25 14:02:18,740 p=5890 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:02:18,741 p=5890 u=aizak n=ansible | myserver                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:04:29,134 p=6257 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:04:29,156 p=6257 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:04:31,144 p=6257 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:04:31,214 p=6257 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:05:07,078 p=6257 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: E:The repository 'https://apt.releases.hashicorp.com bookworm Release' does not have a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'https://packagecloud.io/prometheus-deb/release/debian stretch Release' does not have a Release file."}
+2024-05-25 14:05:07,085 p=6257 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:05:07,086 p=6257 u=aizak n=ansible | myserver                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:11:46,275 p=6450 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:11:46,294 p=6450 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:11:48,267 p=6450 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:11:48,325 p=6450 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:12:23,916 p=6450 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: E:The repository 'https://apt.releases.hashicorp.com bookworm Release' does not have a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'https://packagecloud.io/prometheus-deb/release/debian stretch Release' does not have a Release file."}
+2024-05-25 14:12:23,921 p=6450 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:12:23,921 p=6450 u=aizak n=ansible | myserver                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:12:45,188 p=6485 u=aizak n=ansible | myserver | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-05-25 14:19:50,266 p=6648 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:19:50,290 p=6648 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:19:52,272 p=6648 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:19:52,308 p=6648 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:19:53,662 p=6648 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:19:53,687 p=6648 u=aizak n=ansible | TASK [Add Alertmanager repository] *********************************************************************************
+2024-05-25 14:19:54,959 p=6648 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:19:54,976 p=6648 u=aizak n=ansible | TASK [Add Blackbox Exporter repository] ****************************************************************************
+2024-05-25 14:19:56,089 p=6648 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:19:56,108 p=6648 u=aizak n=ansible | TASK [Update apt cache] ********************************************************************************************
+2024-05-25 14:20:29,781 p=6648 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'https://apt.releases.hashicorp.com bookworm Release' does not have a Release file."}
+2024-05-25 14:20:29,783 p=6648 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:20:29,783 p=6648 u=aizak n=ansible | myserver                   : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:26:34,045 p=6827 u=aizak n=ansible | myserver | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: admini@192.168.1.33: Permission denied (publickey).",
+    "unreachable": true
+}
+2024-05-25 14:26:57,345 p=6842 u=aizak n=ansible | myserver | FAILED! => {
+    "msg": "Missing sudo password"
+}
+2024-05-25 14:28:35,582 p=6872 u=aizak n=ansible | myserver | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-05-25 14:28:45,216 p=6894 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:28:45,234 p=6894 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:28:47,025 p=6894 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"msg": "Missing sudo password"}
+2024-05-25 14:28:47,026 p=6894 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:28:47,026 p=6894 u=aizak n=ansible | myserver                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:29:07,427 p=6913 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:29:07,445 p=6913 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:29:10,913 p=6913 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:29:10,953 p=6913 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:29:47,846 p=6913 u=aizak n=ansible | The following additional packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus-node-exporter prometheus-node-exporter-collectors
+  smartmontools
+Suggested packages:
+  freeipmi-tools gsmartcontrol smart-notifier mailx | mailutils
+The following NEW packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus prometheus-node-exporter
+  prometheus-node-exporter-collectors smartmontools
+0 upgraded, 33 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:29:47,846 p=6913 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:29:47,862 p=6913 u=aizak n=ansible | TASK [Add Alertmanager repository] *********************************************************************************
+2024-05-25 14:29:56,166 p=6913 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-alertmanager
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:29:56,167 p=6913 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:29:56,194 p=6913 u=aizak n=ansible | TASK [Add Blackbox Exporter repository] ****************************************************************************
+2024-05-25 14:30:05,018 p=6913 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-blackbox-exporter
+Preconfiguring packages ...
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:30:05,020 p=6913 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:30:05,081 p=6913 u=aizak n=ansible | TASK [Update apt cache] ********************************************************************************************
+2024-05-25 14:30:09,423 p=6913 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:30:09,481 p=6913 u=aizak n=ansible | TASK [Install Prometheus, Alertmanager, and Blackbox Exporter] *****************************************************
+2024-05-25 14:30:12,130 p=6913 u=aizak n=ansible | ok: [myserver] => (item=prometheus)
+2024-05-25 14:30:14,586 p=6913 u=aizak n=ansible | failed: [myserver] (item=alertmanager) => {"ansible_loop_var": "item", "changed": false, "item": "alertmanager", "msg": "No package matching 'alertmanager' is available"}
+2024-05-25 14:30:17,242 p=6913 u=aizak n=ansible | failed: [myserver] (item=blackbox-exporter) => {"ansible_loop_var": "item", "changed": false, "item": "blackbox-exporter", "msg": "No package matching 'blackbox-exporter' is available"}
+2024-05-25 14:30:17,251 p=6913 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:30:17,252 p=6913 u=aizak n=ansible | myserver                   : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:45:12,515 p=7157 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:45:12,540 p=7157 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:45:16,542 p=7157 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:45:16,571 p=7157 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:45:20,716 p=7157 u=aizak n=ansible | The following additional packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus-node-exporter prometheus-node-exporter-collectors
+  smartmontools
+Suggested packages:
+  freeipmi-tools gsmartcontrol smart-notifier mailx | mailutils
+The following NEW packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus prometheus-node-exporter
+  prometheus-node-exporter-collectors smartmontools
+0 upgraded, 33 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:45:20,717 p=7157 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:45:20,735 p=7157 u=aizak n=ansible | TASK [Add Alertmanager repository] *********************************************************************************
+2024-05-25 14:45:24,956 p=7157 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-alertmanager
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:45:24,958 p=7157 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:45:25,027 p=7157 u=aizak n=ansible | TASK [Add Blackbox Exporter repository] ****************************************************************************
+2024-05-25 14:45:28,974 p=7157 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-blackbox-exporter
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:45:28,975 p=7157 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:45:29,040 p=7157 u=aizak n=ansible | TASK [Update apt cache] ********************************************************************************************
+2024-05-25 14:45:33,456 p=7157 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:45:33,485 p=7157 u=aizak n=ansible | TASK [Install Prometheus, Alertmanager, and Blackbox Exporter] *****************************************************
+2024-05-25 14:45:37,732 p=7157 u=aizak n=ansible | The following additional packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus-node-exporter prometheus-node-exporter-collectors
+  smartmontools
+Suggested packages:
+  freeipmi-tools gsmartcontrol smart-notifier mailx | mailutils
+The following NEW packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus prometheus-node-exporter
+  prometheus-node-exporter-collectors smartmontools
+0 upgraded, 33 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:45:37,737 p=7157 u=aizak n=ansible | changed: [myserver] => (item=prometheus)
+2024-05-25 14:45:41,815 p=7157 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-alertmanager
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:45:41,820 p=7157 u=aizak n=ansible | changed: [myserver] => (item=prometheus-alertmanager)
+2024-05-25 14:45:45,860 p=7157 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-blackbox-exporter
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:45:45,863 p=7157 u=aizak n=ansible | changed: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-25 14:45:45,929 p=7157 u=aizak n=ansible | TASK [Copy Prometheus configuration file] **************************************************************************
+2024-05-25 14:45:48,802 p=7157 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/prometheus.yml[0m
+[0;32m[0m[0;36m@@ -0,0 +1,42 @@[0m
+[0;36m[0m[0;32m+global:[0m
+[0;32m[0m[0;32m+  scrape_interval: 15s[0m
+[0;32m[0m[0;32m+  evaluation_interval: 15s[0m
+[0;32m[0m[0;32m+  external_labels:[0m
+[0;32m[0m[0;32m+    monitor: 'example'[0m
+[0;32m[0m[0;32m+alerting:[0m
+[0;32m[0m[0;32m+  alertmanagers:[0m
+[0;32m[0m[0;32m+    - static_configs:[0m
+[0;32m[0m[0;32m+        - targets: ['localhost:9093'][0m
+[0;32m[0m[0;32m+rule_files:[0m
+[0;32m[0m[0;32m+  - "alert-rules.yml"[0m
+[0;32m[0m[0;32m+scrape_configs:[0m
+[0;32m[0m[0;32m+  - job_name: 'prometheus'[0m
+[0;32m[0m[0;32m+    scrape_interval: 5s[0m
+[0;32m[0m[0;32m+    scrape_timeout: 5s[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9090'][0m
+[0;32m[0m[0;32m+  - job_name: node[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9100'][0m
+[0;32m[0m[0;32m+  - job_name: 'blackboxcheck'[0m
+[0;32m[0m[0;32m+    metrics_path: /probe[0m
+[0;32m[0m[0;32m+    params:[0m
+[0;32m[0m[0;32m+      module: [http_2xx][0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9100', 'mail.ru'][0m
+[0;32m[0m[0;32m+    relabel_configs:[0m
+[0;32m[0m[0;32m+      - source_labels: [__address__][0m
+[0;32m[0m[0;32m+        target_label: __param_target[0m
+[0;32m[0m[0;32m+      - source_labels: [__param_target][0m
+[0;32m[0m[0;32m+        target_label: instance[0m
+[0;32m[0m[0;32m+      - target_label: __address__[0m
+[0;32m[0m[0;32m+        replacement: 127.0.0.1:9115[0m
+[0;32m[0m[0;32m+  - job_name: 'grafana'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:3000'][0m
+[0;32m[0m[0;32m+  - job_name: postgresql[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9187'][0m
+[0;32m[0m[0;32m+  - job_name: 'nginx'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:80'][0m
+[0;32m[0m
+
+2024-05-25 14:45:48,808 p=7157 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:45:48,873 p=7157 u=aizak n=ansible | TASK [Copy Alertmanager configuration file] ************************************************************************
+2024-05-25 14:45:51,746 p=7157 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/alertmanager.yml[0m
+[0;32m[0m[0;36m@@ -0,0 +1,15 @@[0m
+[0;36m[0m[0;32m+route:[0m
+[0;32m[0m[0;32m+  group_by: ['alertname'][0m
+[0;32m[0m[0;32m+  group_wait: 10s[0m
+[0;32m[0m[0;32m+  group_interval: 10s[0m
+[0;32m[0m[0;32m+  repeat_interval: 5m[0m
+[0;32m[0m[0;32m+  receiver: 'telegram'[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+receivers:[0m
+[0;32m[0m[0;32m+  - name: 'telegram'[0m
+[0;32m[0m[0;32m+    telegram_configs:[0m
+[0;32m[0m[0;32m+      - bot_token: '7155226222:AAGoBdtE1aguTiXQsJRqEWmuynKwuMpq9Bw'[0m
+[0;32m[0m[0;32m+        api_url: 'https://api.telegram.org'[0m
+[0;32m[0m[0;32m+        chat_id: -1002099863732[0m
+[0;32m[0m[0;32m+        parse_mode: ''[0m
+[0;32m[0m[0;32m+        message: "Alertmanager \n------------------ \n Alertname: {{  .GroupLabels.alertname}}\n Severity:{{ .CommonLabels.severity }}\n Instance: {{ .CommonLabels.instance }}\n Description: {{ .CommonAnnotations.description }}"[0m
+[0;32m[0m
+
+2024-05-25 14:45:51,748 p=7157 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:45:51,810 p=7157 u=aizak n=ansible | TASK [Copy Blackbox Exporter configuration file] *******************************************************************
+2024-05-25 14:45:52,296 p=7157 u=aizak n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-05-25 14:45:52,298 p=7157 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/aizak/tut/configs/prometheus/blackbox_exporter.yml' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-05-25 14:45:52,302 p=7157 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:45:52,303 p=7157 u=aizak n=ansible | myserver                   : ok=8    changed=6    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:48:19,698 p=7291 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:48:19,725 p=7291 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:48:24,030 p=7291 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:48:24,075 p=7291 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:48:28,540 p=7291 u=aizak n=ansible | The following additional packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus-node-exporter prometheus-node-exporter-collectors
+  smartmontools
+Suggested packages:
+  freeipmi-tools gsmartcontrol smart-notifier mailx | mailutils
+The following NEW packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus prometheus-node-exporter
+  prometheus-node-exporter-collectors smartmontools
+0 upgraded, 33 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:48:28,541 p=7291 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:48:28,565 p=7291 u=aizak n=ansible | TASK [Add Alertmanager repository] *********************************************************************************
+2024-05-25 14:48:32,724 p=7291 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-alertmanager
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:48:32,725 p=7291 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:48:32,744 p=7291 u=aizak n=ansible | TASK [Add Blackbox Exporter repository] ****************************************************************************
+2024-05-25 14:48:36,624 p=7291 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-blackbox-exporter
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:48:36,625 p=7291 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:48:36,648 p=7291 u=aizak n=ansible | TASK [Update apt cache] ********************************************************************************************
+2024-05-25 14:48:40,676 p=7291 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:48:40,694 p=7291 u=aizak n=ansible | TASK [Install Prometheus, Alertmanager, and Blackbox Exporter] *****************************************************
+2024-05-25 14:48:44,746 p=7291 u=aizak n=ansible | The following additional packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus-node-exporter prometheus-node-exporter-collectors
+  smartmontools
+Suggested packages:
+  freeipmi-tools gsmartcontrol smart-notifier mailx | mailutils
+The following NEW packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus prometheus-node-exporter
+  prometheus-node-exporter-collectors smartmontools
+0 upgraded, 33 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:48:44,751 p=7291 u=aizak n=ansible | changed: [myserver] => (item=prometheus)
+2024-05-25 14:48:48,905 p=7291 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-alertmanager
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:48:48,910 p=7291 u=aizak n=ansible | changed: [myserver] => (item=prometheus-alertmanager)
+2024-05-25 14:48:53,149 p=7291 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-blackbox-exporter
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:48:53,150 p=7291 u=aizak n=ansible | changed: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-25 14:48:53,190 p=7291 u=aizak n=ansible | TASK [Copy Prometheus configuration file] **************************************************************************
+2024-05-25 14:48:56,095 p=7291 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/prometheus.yml[0m
+[0;32m[0m[0;36m@@ -0,0 +1,42 @@[0m
+[0;36m[0m[0;32m+global:[0m
+[0;32m[0m[0;32m+  scrape_interval: 15s[0m
+[0;32m[0m[0;32m+  evaluation_interval: 15s[0m
+[0;32m[0m[0;32m+  external_labels:[0m
+[0;32m[0m[0;32m+    monitor: 'example'[0m
+[0;32m[0m[0;32m+alerting:[0m
+[0;32m[0m[0;32m+  alertmanagers:[0m
+[0;32m[0m[0;32m+    - static_configs:[0m
+[0;32m[0m[0;32m+        - targets: ['localhost:9093'][0m
+[0;32m[0m[0;32m+rule_files:[0m
+[0;32m[0m[0;32m+  - "alert-rules.yml"[0m
+[0;32m[0m[0;32m+scrape_configs:[0m
+[0;32m[0m[0;32m+  - job_name: 'prometheus'[0m
+[0;32m[0m[0;32m+    scrape_interval: 5s[0m
+[0;32m[0m[0;32m+    scrape_timeout: 5s[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9090'][0m
+[0;32m[0m[0;32m+  - job_name: node[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9100'][0m
+[0;32m[0m[0;32m+  - job_name: 'blackboxcheck'[0m
+[0;32m[0m[0;32m+    metrics_path: /probe[0m
+[0;32m[0m[0;32m+    params:[0m
+[0;32m[0m[0;32m+      module: [http_2xx][0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9100', 'mail.ru'][0m
+[0;32m[0m[0;32m+    relabel_configs:[0m
+[0;32m[0m[0;32m+      - source_labels: [__address__][0m
+[0;32m[0m[0;32m+        target_label: __param_target[0m
+[0;32m[0m[0;32m+      - source_labels: [__param_target][0m
+[0;32m[0m[0;32m+        target_label: instance[0m
+[0;32m[0m[0;32m+      - target_label: __address__[0m
+[0;32m[0m[0;32m+        replacement: 127.0.0.1:9115[0m
+[0;32m[0m[0;32m+  - job_name: 'grafana'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:3000'][0m
+[0;32m[0m[0;32m+  - job_name: postgresql[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9187'][0m
+[0;32m[0m[0;32m+  - job_name: 'nginx'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:80'][0m
+[0;32m[0m
+
+2024-05-25 14:48:56,096 p=7291 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:48:56,122 p=7291 u=aizak n=ansible | TASK [Copy Alertmanager configuration file] ************************************************************************
+2024-05-25 14:48:58,966 p=7291 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/alertmanager.yml[0m
+[0;32m[0m[0;36m@@ -0,0 +1,15 @@[0m
+[0;36m[0m[0;32m+route:[0m
+[0;32m[0m[0;32m+  group_by: ['alertname'][0m
+[0;32m[0m[0;32m+  group_wait: 10s[0m
+[0;32m[0m[0;32m+  group_interval: 10s[0m
+[0;32m[0m[0;32m+  repeat_interval: 5m[0m
+[0;32m[0m[0;32m+  receiver: 'telegram'[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+receivers:[0m
+[0;32m[0m[0;32m+  - name: 'telegram'[0m
+[0;32m[0m[0;32m+    telegram_configs:[0m
+[0;32m[0m[0;32m+      - bot_token: '7155226222:AAGoBdtE1aguTiXQsJRqEWmuynKwuMpq9Bw'[0m
+[0;32m[0m[0;32m+        api_url: 'https://api.telegram.org'[0m
+[0;32m[0m[0;32m+        chat_id: -1002099863732[0m
+[0;32m[0m[0;32m+        parse_mode: ''[0m
+[0;32m[0m[0;32m+        message: "Alertmanager \n------------------ \n Alertname: {{  .GroupLabels.alertname}}\n Severity:{{ .CommonLabels.severity }}\n Instance: {{ .CommonLabels.instance }}\n Description: {{ .CommonAnnotations.description }}"[0m
+[0;32m[0m
+
+2024-05-25 14:48:58,967 p=7291 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:48:58,993 p=7291 u=aizak n=ansible | TASK [Copy Blackbox Exporter configuration file] *******************************************************************
+2024-05-25 14:49:01,728 p=7291 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/blackbox.yml[0m
+[0;32m[0m[0;36m@@ -0,0 +1,52 @@[0m
+[0;36m[0m[0;32m+modules:[0m
+[0;32m[0m[0;32m+  http_2xx:[0m
+[0;32m[0m[0;32m+    prober: http[0m
+[0;32m[0m[0;32m+    http:[0m
+[0;32m[0m[0;32m+      ip_protocol_fallback: true[0m
+[0;32m[0m[0;32m+      preferred_ip_protocol: "ip4"[0m
+[0;32m[0m[0;32m+  http_post_2xx:[0m
+[0;32m[0m[0;32m+    prober: http[0m
+[0;32m[0m[0;32m+    http:[0m
+[0;32m[0m[0;32m+      method: POST[0m
+[0;32m[0m[0;32m+  tcp_connect:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+  pop3s_banner:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+    tcp:[0m
+[0;32m[0m[0;32m+      query_response:[0m
+[0;32m[0m[0;32m+      - expect: "^+OK"[0m
+[0;32m[0m[0;32m+      tls: true[0m
+[0;32m[0m[0;32m+      tls_config:[0m
+[0;32m[0m[0;32m+        insecure_skip_verify: false[0m
+[0;32m[0m[0;32m+  grpc:[0m
+[0;32m[0m[0;32m+    prober: grpc[0m
+[0;32m[0m[0;32m+    grpc:[0m
+[0;32m[0m[0;32m+      tls: true[0m
+[0;32m[0m[0;32m+      preferred_ip_protocol: "ip4"[0m
+[0;32m[0m[0;32m+  grpc_plain:[0m
+[0;32m[0m[0;32m+    prober: grpc[0m
+[0;32m[0m[0;32m+    grpc:[0m
+[0;32m[0m[0;32m+      tls: false[0m
+[0;32m[0m[0;32m+      service: "service1"[0m
+[0;32m[0m[0;32m+  ssh_banner:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+    tcp:[0m
+[0;32m[0m[0;32m+      query_response:[0m
+[0;32m[0m[0;32m+      - expect: "^SSH-2.0-"[0m
+[0;32m[0m[0;32m+      - send: "SSH-2.0-blackbox-ssh-check"[0m
+[0;32m[0m[0;32m+  irc_banner:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+    tcp:[0m
+[0;32m[0m[0;32m+      query_response:[0m
+[0;32m[0m[0;32m+      - send: "NICK prober"[0m
+[0;32m[0m[0;32m+      - send: "USER prober prober prober :prober"[0m
+[0;32m[0m[0;32m+      - expect: "PING :([^ ]+)"[0m
+[0;32m[0m[0;32m+        send: "PONG ${1}"[0m
+[0;32m[0m[0;32m+      - expect: "^:[^ ]+ 001"[0m
+[0;32m[0m[0;32m+  icmp:[0m
+[0;32m[0m[0;32m+    prober: icmp[0m
+[0;32m[0m[0;32m+  icmp_ttl5:[0m
+[0;32m[0m[0;32m+    prober: icmp[0m
+[0;32m[0m[0;32m+    timeout: 5s[0m
+[0;32m[0m[0;32m+    icmp:[0m
+[0;32m[0m[0;32m+      ttl: 5[0m
+[0;32m[0m
+
+2024-05-25 14:49:01,729 p=7291 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:49:01,762 p=7291 u=aizak n=ansible | TASK [Restart Prometheus service] **********************************************************************************
+2024-05-25 14:49:04,182 p=7291 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Could not find the requested service prometheus: host"}
+2024-05-25 14:49:04,186 p=7291 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:49:04,186 p=7291 u=aizak n=ansible | myserver                   : ok=9    changed=7    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:50:31,574 p=7429 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:50:31,591 p=7429 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:50:35,977 p=7429 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:50:36,013 p=7429 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:51:16,809 p=7429 u=aizak n=ansible | The following additional packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus-node-exporter prometheus-node-exporter-collectors
+  smartmontools
+Suggested packages:
+  freeipmi-tools gsmartcontrol smart-notifier mailx | mailutils
+The following NEW packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-bootstrap4
+  libjs-d3 libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys
+  libjs-moment libjs-moment-timezone libjs-mustache libjs-popper.js
+  libjs-rickshaw libjs-sizzle libncurses6 libnvme1 libonig5 libopenipmi0
+  libtime-duration-perl libtimedate-perl moreutils node-jquery nvme-cli
+  openipmi prometheus prometheus-node-exporter
+  prometheus-node-exporter-collectors smartmontools
+0 upgraded, 33 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:51:16,811 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:51:16,841 p=7429 u=aizak n=ansible | TASK [Add Alertmanager repository] *********************************************************************************
+2024-05-25 14:51:26,467 p=7429 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-alertmanager
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:51:26,471 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:51:26,537 p=7429 u=aizak n=ansible | TASK [Add Blackbox Exporter repository] ****************************************************************************
+2024-05-25 14:51:35,439 p=7429 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-blackbox-exporter
+0 upgraded, 1 newly installed, 0 to remove and 42 not upgraded.
+2024-05-25 14:51:35,441 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:51:35,505 p=7429 u=aizak n=ansible | TASK [Update apt cache] ********************************************************************************************
+2024-05-25 14:51:39,935 p=7429 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:51:39,965 p=7429 u=aizak n=ansible | TASK [Install Prometheus, Alertmanager, and Blackbox Exporter] *****************************************************
+2024-05-25 14:51:42,497 p=7429 u=aizak n=ansible | ok: [myserver] => (item=prometheus)
+2024-05-25 14:51:45,264 p=7429 u=aizak n=ansible | ok: [myserver] => (item=prometheus-alertmanager)
+2024-05-25 14:51:47,614 p=7429 u=aizak n=ansible | ok: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-25 14:51:47,684 p=7429 u=aizak n=ansible | TASK [Copy Prometheus configuration file] **************************************************************************
+2024-05-25 14:51:53,352 p=7429 u=aizak n=ansible | [0;31m--- before: /etc/prometheus/prometheus.yml[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/prometheus.yml[0m
+[0;32m[0m[0;36m@@ -1,44 +1,42 @@[0m
+[0;36m[0m[0;31m-# Sample config for Prometheus.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m global:
+[0;31m-  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.[0m
+[0;31m[0m[0;31m-  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.[0m
+[0;31m[0m[0;31m-  # scrape_timeout is set to the global default (10s).[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # Attach these labels to any time series or alerts when communicating with[0m
+[0;31m[0m[0;31m-  # external systems (federation, remote storage, Alertmanager).[0m
+[0;31m[0m[0;32m+  scrape_interval: 15s[0m
+[0;32m[0m[0;32m+  evaluation_interval: 15s[0m
+[0;32m[0m   external_labels:
+[0;31m-      monitor: 'example'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# Alertmanager configuration[0m
+[0;31m[0m[0;32m+    monitor: 'example'[0m
+[0;32m[0m alerting:
+   alertmanagers:
+[0;31m-  - static_configs:[0m
+[0;31m[0m[0;31m-    - targets: ['localhost:9093'][0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.[0m
+[0;31m[0m[0;32m+    - static_configs:[0m
+[0;32m[0m[0;32m+        - targets: ['localhost:9093'][0m
+[0;32m[0m rule_files:
+[0;31m-  # - "first_rules.yml"[0m
+[0;31m[0m[0;31m-  # - "second_rules.yml"[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# A scrape configuration containing exactly one endpoint to scrape:[0m
+[0;31m[0m[0;31m-# Here it's Prometheus itself.[0m
+[0;31m[0m[0;32m+  - "alert-rules.yml"[0m
+[0;32m[0m scrape_configs:
+[0;31m-  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.[0m
+[0;31m[0m   - job_name: 'prometheus'
+[0;31m-[0m
+[0;31m[0m[0;31m-    # Override the global default and scrape targets from this job every 5 seconds.[0m
+[0;31m[0m     scrape_interval: 5s
+     scrape_timeout: 5s
+[0;31m-[0m
+[0;31m[0m[0;31m-    # metrics_path defaults to '/metrics'[0m
+[0;31m[0m[0;31m-    # scheme defaults to 'http'.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m     static_configs:
+       - targets: ['localhost:9090']
+[0;31m-[0m
+[0;31m[0m   - job_name: node
+[0;31m-    # If prometheus-node-exporter is installed, grab stats about the local[0m
+[0;31m[0m[0;31m-    # machine by default.[0m
+[0;31m[0m     static_configs:
+       - targets: ['localhost:9100']
+[0;32m+  - job_name: 'blackboxcheck'[0m
+[0;32m[0m[0;32m+    metrics_path: /probe[0m
+[0;32m[0m[0;32m+    params:[0m
+[0;32m[0m[0;32m+      module: [http_2xx][0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9100', 'mail.ru'][0m
+[0;32m[0m[0;32m+    relabel_configs:[0m
+[0;32m[0m[0;32m+      - source_labels: [__address__][0m
+[0;32m[0m[0;32m+        target_label: __param_target[0m
+[0;32m[0m[0;32m+      - source_labels: [__param_target][0m
+[0;32m[0m[0;32m+        target_label: instance[0m
+[0;32m[0m[0;32m+      - target_label: __address__[0m
+[0;32m[0m[0;32m+        replacement: 127.0.0.1:9115[0m
+[0;32m[0m[0;32m+  - job_name: 'grafana'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:3000'][0m
+[0;32m[0m[0;32m+  - job_name: postgresql[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9187'][0m
+[0;32m[0m[0;32m+  - job_name: 'nginx'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:80'][0m
+[0;32m[0m
+
+2024-05-25 14:51:53,353 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:51:53,398 p=7429 u=aizak n=ansible | TASK [Copy Alertmanager configuration file] ************************************************************************
+2024-05-25 14:51:58,554 p=7429 u=aizak n=ansible | [0;31m--- before: /etc/prometheus/alertmanager.yml[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/alertmanager.yml[0m
+[0;32m[0m[0;36m@@ -1,116 +1,15 @@[0m
+[0;36m[0m[0;31m-# Sample configuration.[0m
+[0;31m[0m[0;31m-# See https://prometheus.io/docs/alerting/configuration/ for documentation.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-global:[0m
+[0;31m[0m[0;31m-  # The smarthost and SMTP sender used for mail notifications.[0m
+[0;31m[0m[0;31m-  smtp_smarthost: 'localhost:25'[0m
+[0;31m[0m[0;31m-  smtp_from: 'alertmanager@example.org'[0m
+[0;31m[0m[0;31m-  smtp_auth_username: 'alertmanager'[0m
+[0;31m[0m[0;31m-  smtp_auth_password: 'password'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# The directory from which notification templates are read.[0m
+[0;31m[0m[0;31m-templates: [0m
+[0;31m[0m[0;31m-- '/etc/prometheus/alertmanager_templates/*.tmpl'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# The root route on which each incoming alert enters.[0m
+[0;31m[0m route:
+[0;31m-  # The labels by which incoming alerts are grouped together. For example,[0m
+[0;31m[0m[0;31m-  # multiple alerts coming in for cluster=A and alertname=LatencyHigh would[0m
+[0;31m[0m[0;31m-  # be batched into a single group.[0m
+[0;31m[0m[0;31m-  group_by: ['alertname', 'cluster', 'service'][0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # When a new group of alerts is created by an incoming alert, wait at[0m
+[0;31m[0m[0;31m-  # least 'group_wait' to send the initial notification.[0m
+[0;31m[0m[0;31m-  # This way ensures that you get multiple alerts for the same group that start[0m
+[0;31m[0m[0;31m-  # firing shortly after another are batched together on the first [0m
+[0;31m[0m[0;31m-  # notification.[0m
+[0;31m[0m[0;31m-  group_wait: 30s[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # When the first notification was sent, wait 'group_interval' to send a batch[0m
+[0;31m[0m[0;31m-  # of new alerts that started firing for that group.[0m
+[0;31m[0m[0;31m-  group_interval: 5m[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # If an alert has successfully been sent, wait 'repeat_interval' to[0m
+[0;31m[0m[0;31m-  # resend them.[0m
+[0;31m[0m[0;31m-  repeat_interval: 3h [0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # A default receiver[0m
+[0;31m[0m[0;31m-  receiver: team-X-mails[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # All the above attributes are inherited by all child routes and can [0m
+[0;31m[0m[0;31m-  # overwritten on each.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # The child route trees.[0m
+[0;31m[0m[0;31m-  routes:[0m
+[0;31m[0m[0;31m-  # This routes performs a regular expression match on alert labels to[0m
+[0;31m[0m[0;31m-  # catch alerts that are related to a list of services.[0m
+[0;31m[0m[0;31m-  - match_re:[0m
+[0;31m[0m[0;31m-      service: ^(foo1|foo2|baz)$[0m
+[0;31m[0m[0;31m-    receiver: team-X-mails[0m
+[0;31m[0m[0;31m-    # The service has a sub-route for critical alerts, any alerts[0m
+[0;31m[0m[0;31m-    # that do not match, i.e. severity != critical, fall-back to the[0m
+[0;31m[0m[0;31m-    # parent node and are sent to 'team-X-mails'[0m
+[0;31m[0m[0;31m-    routes:[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        severity: critical[0m
+[0;31m[0m[0;31m-      receiver: team-X-pager[0m
+[0;31m[0m[0;31m-  - match:[0m
+[0;31m[0m[0;31m-      service: files[0m
+[0;31m[0m[0;31m-    receiver: team-Y-mails[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    routes:[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        severity: critical[0m
+[0;31m[0m[0;31m-      receiver: team-Y-pager[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # This route handles all alerts coming from a database service. If there's[0m
+[0;31m[0m[0;31m-  # no team to handle it, it defaults to the DB team.[0m
+[0;31m[0m[0;31m-  - match:[0m
+[0;31m[0m[0;31m-      service: database[0m
+[0;31m[0m[0;31m-    receiver: team-DB-pager[0m
+[0;31m[0m[0;31m-    # Also group alerts by affected database.[0m
+[0;31m[0m[0;31m-    group_by: [alertname, cluster, database][0m
+[0;31m[0m[0;31m-    routes:[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        owner: team-X[0m
+[0;31m[0m[0;31m-      receiver: team-X-pager[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        owner: team-Y[0m
+[0;31m[0m[0;31m-      receiver: team-Y-pager[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# Inhibition rules allow to mute a set of alerts given that another alert is[0m
+[0;31m[0m[0;31m-# firing.[0m
+[0;31m[0m[0;31m-# We use this to mute any warning-level notifications if the same alert is [0m
+[0;31m[0m[0;31m-# already critical.[0m
+[0;31m[0m[0;31m-inhibit_rules:[0m
+[0;31m[0m[0;31m-- source_match:[0m
+[0;31m[0m[0;31m-    severity: 'critical'[0m
+[0;31m[0m[0;31m-  target_match:[0m
+[0;31m[0m[0;31m-    severity: 'warning'[0m
+[0;31m[0m[0;31m-  # Apply inhibition if the alertname is the same.[0m
+[0;31m[0m[0;31m-  equal: ['alertname', 'cluster', 'service'][0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;32m+  group_by: ['alertname'][0m
+[0;32m[0m[0;32m+  group_wait: 10s[0m
+[0;32m[0m[0;32m+  group_interval: 10s[0m
+[0;32m[0m[0;32m+  repeat_interval: 5m[0m
+[0;32m[0m[0;32m+  receiver: 'telegram'[0m
+[0;32m[0m 
+ receivers:
+[0;31m-- name: 'team-X-mails'[0m
+[0;31m[0m[0;31m-  email_configs:[0m
+[0;31m[0m[0;31m-  - to: 'team-X+alerts@example.org'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-X-pager'[0m
+[0;31m[0m[0;31m-  email_configs:[0m
+[0;31m[0m[0;31m-  - to: 'team-X+alerts-critical@example.org'[0m
+[0;31m[0m[0;31m-  pagerduty_configs:[0m
+[0;31m[0m[0;31m-  - service_key: <team-X-key>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-Y-mails'[0m
+[0;31m[0m[0;31m-  email_configs:[0m
+[0;31m[0m[0;31m-  - to: 'team-Y+alerts@example.org'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-Y-pager'[0m
+[0;31m[0m[0;31m-  pagerduty_configs:[0m
+[0;31m[0m[0;31m-  - service_key: <team-Y-key>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-DB-pager'[0m
+[0;31m[0m[0;31m-  pagerduty_configs:[0m
+[0;31m[0m[0;31m-  - service_key: <team-DB-key>[0m
+[0;31m[0m[0;32m+  - name: 'telegram'[0m
+[0;32m[0m[0;32m+    telegram_configs:[0m
+[0;32m[0m[0;32m+      - bot_token: '7155226222:AAGoBdtE1aguTiXQsJRqEWmuynKwuMpq9Bw'[0m
+[0;32m[0m[0;32m+        api_url: 'https://api.telegram.org'[0m
+[0;32m[0m[0;32m+        chat_id: -1002099863732[0m
+[0;32m[0m[0;32m+        parse_mode: ''[0m
+[0;32m[0m[0;32m+        message: "Alertmanager \n------------------ \n Alertname: {{  .GroupLabels.alertname}}\n Severity:{{ .CommonLabels.severity }}\n Instance: {{ .CommonLabels.instance }}\n Description: {{ .CommonAnnotations.description }}"[0m
+[0;32m[0m
+
+2024-05-25 14:51:58,556 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:51:58,619 p=7429 u=aizak n=ansible | TASK [Copy Blackbox Exporter configuration file] *******************************************************************
+2024-05-25 14:52:02,454 p=7429 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/blackbox.yml[0m
+[0;32m[0m[0;36m@@ -0,0 +1,52 @@[0m
+[0;36m[0m[0;32m+modules:[0m
+[0;32m[0m[0;32m+  http_2xx:[0m
+[0;32m[0m[0;32m+    prober: http[0m
+[0;32m[0m[0;32m+    http:[0m
+[0;32m[0m[0;32m+      ip_protocol_fallback: true[0m
+[0;32m[0m[0;32m+      preferred_ip_protocol: "ip4"[0m
+[0;32m[0m[0;32m+  http_post_2xx:[0m
+[0;32m[0m[0;32m+    prober: http[0m
+[0;32m[0m[0;32m+    http:[0m
+[0;32m[0m[0;32m+      method: POST[0m
+[0;32m[0m[0;32m+  tcp_connect:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+  pop3s_banner:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+    tcp:[0m
+[0;32m[0m[0;32m+      query_response:[0m
+[0;32m[0m[0;32m+      - expect: "^+OK"[0m
+[0;32m[0m[0;32m+      tls: true[0m
+[0;32m[0m[0;32m+      tls_config:[0m
+[0;32m[0m[0;32m+        insecure_skip_verify: false[0m
+[0;32m[0m[0;32m+  grpc:[0m
+[0;32m[0m[0;32m+    prober: grpc[0m
+[0;32m[0m[0;32m+    grpc:[0m
+[0;32m[0m[0;32m+      tls: true[0m
+[0;32m[0m[0;32m+      preferred_ip_protocol: "ip4"[0m
+[0;32m[0m[0;32m+  grpc_plain:[0m
+[0;32m[0m[0;32m+    prober: grpc[0m
+[0;32m[0m[0;32m+    grpc:[0m
+[0;32m[0m[0;32m+      tls: false[0m
+[0;32m[0m[0;32m+      service: "service1"[0m
+[0;32m[0m[0;32m+  ssh_banner:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+    tcp:[0m
+[0;32m[0m[0;32m+      query_response:[0m
+[0;32m[0m[0;32m+      - expect: "^SSH-2.0-"[0m
+[0;32m[0m[0;32m+      - send: "SSH-2.0-blackbox-ssh-check"[0m
+[0;32m[0m[0;32m+  irc_banner:[0m
+[0;32m[0m[0;32m+    prober: tcp[0m
+[0;32m[0m[0;32m+    tcp:[0m
+[0;32m[0m[0;32m+      query_response:[0m
+[0;32m[0m[0;32m+      - send: "NICK prober"[0m
+[0;32m[0m[0;32m+      - send: "USER prober prober prober :prober"[0m
+[0;32m[0m[0;32m+      - expect: "PING :([^ ]+)"[0m
+[0;32m[0m[0;32m+        send: "PONG ${1}"[0m
+[0;32m[0m[0;32m+      - expect: "^:[^ ]+ 001"[0m
+[0;32m[0m[0;32m+  icmp:[0m
+[0;32m[0m[0;32m+    prober: icmp[0m
+[0;32m[0m[0;32m+  icmp_ttl5:[0m
+[0;32m[0m[0;32m+    prober: icmp[0m
+[0;32m[0m[0;32m+    timeout: 5s[0m
+[0;32m[0m[0;32m+    icmp:[0m
+[0;32m[0m[0;32m+      ttl: 5[0m
+[0;32m[0m
+
+2024-05-25 14:52:02,457 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:52:02,517 p=7429 u=aizak n=ansible | TASK [Restart Prometheus service] **********************************************************************************
+2024-05-25 14:52:04,754 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:52:04,831 p=7429 u=aizak n=ansible | TASK [Restart Alertmanager service] ********************************************************************************
+2024-05-25 14:52:06,860 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:52:06,895 p=7429 u=aizak n=ansible | TASK [Restart Blackbox Exporter service] ***************************************************************************
+2024-05-25 14:52:08,998 p=7429 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:52:09,053 p=7429 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:52:09,053 p=7429 u=aizak n=ansible | myserver                   : ok=12   changed=9    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-25 14:55:03,475 p=7690 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************
+2024-05-25 14:55:03,494 p=7690 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-25 14:55:07,811 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:07,880 p=7690 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************
+2024-05-25 14:55:10,317 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:10,382 p=7690 u=aizak n=ansible | TASK [Add Alertmanager repository] *********************************************************************************
+2024-05-25 14:55:13,258 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:13,289 p=7690 u=aizak n=ansible | TASK [Add Blackbox Exporter repository] ****************************************************************************
+2024-05-25 14:55:15,841 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:15,916 p=7690 u=aizak n=ansible | TASK [Update apt cache] ********************************************************************************************
+2024-05-25 14:55:20,103 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:20,129 p=7690 u=aizak n=ansible | TASK [Install Prometheus, Alertmanager, and Blackbox Exporter] *****************************************************
+2024-05-25 14:55:23,098 p=7690 u=aizak n=ansible | ok: [myserver] => (item=prometheus)
+2024-05-25 14:55:25,825 p=7690 u=aizak n=ansible | ok: [myserver] => (item=prometheus-alertmanager)
+2024-05-25 14:55:28,683 p=7690 u=aizak n=ansible | ok: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-25 14:55:28,747 p=7690 u=aizak n=ansible | TASK [Copy Prometheus configuration file] **************************************************************************
+2024-05-25 14:55:31,876 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:31,951 p=7690 u=aizak n=ansible | TASK [Copy Alertmanager configuration file] ************************************************************************
+2024-05-25 14:55:34,526 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:34,602 p=7690 u=aizak n=ansible | TASK [Copy Blackbox Exporter configuration file] *******************************************************************
+2024-05-25 14:55:37,386 p=7690 u=aizak n=ansible | ok: [myserver]
+2024-05-25 14:55:37,401 p=7690 u=aizak n=ansible | TASK [Alert Rules] *************************************************************************************************
+2024-05-25 14:55:41,971 p=7690 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/alert-rules.yml[0m
+[0;32m[0m[0;36m@@ -0,0 +1,221 @@[0m
+[0;36m[0m[0;32m+groups:[0m
+[0;32m[0m[0;32m+  - name: Critical alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: InstanceDown[0m
+[0;32m[0m[0;32m+        expr: up == 0[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute."[0m
+[0;32m[0m[0;32m+          summary: Instance {{ $labels.instance }} downestart=on-failure[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PrometheusConfigurationReloadFailure[0m
+[0;32m[0m[0;32m+        expr: prometheus_config_last_reload_successful != 1[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          project: "{{$labels.project}}"[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: Prometheus configuration reload failure[0m
+[0;32m[0m[0;32m+          description: "Prometheus configuration reload error"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PrometheusTooManyRestarts[0m
+[0;32m[0m[0;32m+        expr: changes(process_start_time_seconds{job=~"prometheus|alertmanager"}[15m]) > 2[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          project: "{{$labels.project}}"[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Prometheus too many restarts[0m
+[0;32m[0m[0;32m+          description: "Prometheus has restarted more than twice in the last 15 minutes. It might be crashlooping"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PrometheusNotificationsFailed[0m
+[0;32m[0m[0;32m+        expr: sum(increase(alertmanager_notifications_failed_total{integration="webhook"}[5m])) by (integration, job) > 40[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          project: "{{$labels.project}}"[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Prometheus too many failed notifications[0m
+[0;32m[0m[0;32m+          description: "Prometheus too many failed notifications"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: Systemd alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: SystemdServiceFailed[0m
+[0;32m[0m[0;32m+        expr: node_systemd_unit_state{state="failed", name!="dnf-makecache.service"} == 1[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: "{{ $labels.name }} failed"[0m
+[0;32m[0m[0;32m+          description: "systemd service {{ $labels.name }} failed"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: DiskBusy[0m
+[0;32m[0m[0;32m+        expr: rate(node_disk_io_time_seconds_total{device!~"(md|dm).*"}[5m]) * 100 > 90[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: '{{ $labels.device }} busy {{ $value | printf "%.0f"}}%'[0m
+[0;32m[0m[0;32m+          description: 'Disk {{ $labels.device }} busy {{ $value |printf "%.0f"}}%'[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostOutOfMemory[0m
+[0;32m[0m[0;32m+        expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes *100 < 10)[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: 'Host out of memory ({{ $value | printf "%.0f"}}%)'[0m
+[0;32m[0m[0;32m+          description: 'Node memory is filling up ({{ $value | printf "%.0f"}}%< 10%)'[0m
+[0;32m[0m[0;32m+      - alert: SystemLoad_5m[0m
+[0;32m[0m[0;32m+        expr: (avg by(job,instance) (node_load5) / count by(job,instance)(count by(cpu,job,instance) (node_cpu_seconds_total)) * 100) >= 100[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: "{{ if ge $value 105.0 }}critical{{ else }}warning{{ end}}"[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: 'System Load 5m: {{ $value | printf "%.0f"}}%'[0m
+[0;32m[0m[0;32m+          description: 'System Load 5m too high ({{ $value | printf "%.0f"}}%)for 1 minutes'[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: BlackBox alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeFailed[0m
+[0;32m[0m[0;32m+        expr: probe_success{} != 1[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: "Blackbox probe failed. {{$labels.instance }}"[0m
+[0;32m[0m[0;32m+          description: "Blackbox probe failed (instance {{ $labels.instance}})"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeHttpFailure[0m
+[0;32m[0m[0;32m+        expr: probe_http_status_code <= 199 OR probe_http_status_code >= 400[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Blackbox probe HTTP failure (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "HTTP status code is not 200-399\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeSlowPing[0m
+[0;32m[0m[0;32m+        expr: avg_over_time(probe_icmp_duration_seconds[1m]) > 1[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Blackbox probe slow ping (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Blackbox ping took more than 1s\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeSlowHttp[0m
+[0;32m[0m[0;32m+        expr: avg_over_time(probe_http_duration_seconds[1m]) > 1[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Blackbox probe slow HTTP (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "HTTP request took more than 1s\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: Hardware alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: DiskSpace50%Free[0m
+[0;32m[0m[0;32m+        expr: node_exporter:node_filesystem_free:fs_used_percents >= 50[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: moderate[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: "Instance {{ $labels.instance }} is half or lower on disk space"[0m
+[0;32m[0m[0;32m+          description: "{{ $labels.instance }} has only {{ $value }}% free."[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HighCpuLoad[0m
+[0;32m[0m[0;32m+        expr: (sum by (instance) (avg by (mode, instance) (rate(node_cpu_seconds_total{mode!="idle"}[2m]))) > 0.8) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host high CPU load (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "CPU load is > 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostPhysicalComponentTooHot[0m
+[0;32m[0m[0;32m+        expr: ((node_hwmon_temp_celsius * ignoring(label) group_left(instance, job, node, sensor) node_hwmon_sensor_label{label!="tctl"} > 75)) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host physical component too hot (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Physical hardware component too hot\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostNetworkBondDegraded[0m
+[0;32m[0m[0;32m+        expr: (node_bonding_active - node_bonding_slaves) != 0[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host Network Bond Degraded (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Bond \"{{ $labels.device }}\" degraded on \"{{ $labels.instance }}\".\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostClockNotSynchronising[0m
+[0;32m[0m[0;32m+        expr: min_over_time(node_timex_sync_status[1m]) == 0 and node_timex_maxerror_seconds >= 16[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host clock not synchronising (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Clock not synchronising. Ensure NTP is configured on this host.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostOutOfDiskSpace[0m
+[0;32m[0m[0;32m+        expr: ((node_filesystem_avail_bytes * 100) / node_filesystem_size_bytes < 10 and ON (instance, device, mountpoint) node_filesystem_readonly == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host out of disk space (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Disk is almost full (< 10% left)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostOutOfInodes[0m
+[0;32m[0m[0;32m+        expr: (node_filesystem_files_free{fstype!="msdosfs"} / node_filesystem_files{fstype!="msdosfs"} * 100 < 10 and ON (instance, device, mountpoint) node_filesystem_readonly == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host out of inodes (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Disk is almost running out of available inodes (< 10% left)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostClockSkew[0m
+[0;32m[0m[0;32m+        expr: ((node_timex_offset_seconds > 0.05 and deriv(node_timex_offset_seconds[5m]) >= 0) or (node_timex_offset_seconds < -0.05 and deriv(node_timex_offset_seconds[5m]) <= 0)) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 10m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host clock skew (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Clock skew detected. Clock is out of sync. Ensure NTP is configured correctly on this host.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: Postgres alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: PostgresqlDown[0m
+[0;32m[0m[0;32m+        expr: pg_up == 0[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Postgresql down (instance {{ .instance }})[0m
+[0;32m[0m[0;32m+          description: Postgresql instance is downn VALUE = {{ }}n LABELS = {{ }}[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PostgresqlRestarted[0m
+[0;32m[0m[0;32m+        expr: time() - pg_postmaster_start_time_seconds < 60[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Postgresql restarted (instance {{ .instance }})[0m
+[0;32m[0m[0;32m+          description: Postgresql restartedn VALUE = {{ }}n LABELS = {{ }}[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PostgresqlExporterError[0m
+[0;32m[0m[0;32m+        expr: pg_exporter_last_scrape_error > 0[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Postgresql exporter error (instance {{ .instance }})[0m
+[0;32m[0m[0;32m+          description: Postgresql exporter is showing errors. A query may be buggy in query.yamln VALUE = {{ }}n LABELS = {{ }}[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m
+
+2024-05-25 14:55:41,972 p=7690 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:55:41,998 p=7690 u=aizak n=ansible | TASK [Restart Prometheus service] **********************************************************************************
+2024-05-25 14:55:44,536 p=7690 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:55:44,599 p=7690 u=aizak n=ansible | TASK [Restart Alertmanager service] ********************************************************************************
+2024-05-25 14:55:46,551 p=7690 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:55:46,615 p=7690 u=aizak n=ansible | TASK [Restart Blackbox Exporter service] ***************************************************************************
+2024-05-25 14:55:48,672 p=7690 u=aizak n=ansible | changed: [myserver]
+2024-05-25 14:55:48,760 p=7690 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-25 14:55:48,760 p=7690 u=aizak n=ansible | myserver                   : ok=13   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-25 15:04:56,085 p=8050 u=aizak n=ansible | PLAY [my playbook] *************************************************************************************************************************************************************************************************************************
+2024-05-25 15:04:56,103 p=8050 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************************************
+2024-05-25 15:05:00,454 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:00,516 p=8050 u=aizak n=ansible | TASK [Add Prometheus repository] ***********************************************************************************************************************************************************************************************************
+2024-05-25 15:05:02,955 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:02,976 p=8050 u=aizak n=ansible | TASK [Add Alertmanager repository] *********************************************************************************************************************************************************************************************************
+2024-05-25 15:05:05,927 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:05,963 p=8050 u=aizak n=ansible | TASK [Add Blackbox Exporter repository] ****************************************************************************************************************************************************************************************************
+2024-05-25 15:05:08,290 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:08,355 p=8050 u=aizak n=ansible | TASK [Update apt cache] ********************************************************************************************************************************************************************************************************************
+2024-05-25 15:05:12,032 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:12,096 p=8050 u=aizak n=ansible | TASK [Install Prometheus, Alertmanager, and Blackbox Exporter] *****************************************************************************************************************************************************************************
+2024-05-25 15:05:14,916 p=8050 u=aizak n=ansible | ok: [myserver] => (item=prometheus)
+2024-05-25 15:05:17,644 p=8050 u=aizak n=ansible | ok: [myserver] => (item=prometheus-alertmanager)
+2024-05-25 15:05:20,302 p=8050 u=aizak n=ansible | ok: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-25 15:05:20,384 p=8050 u=aizak n=ansible | TASK [Copy Prometheus configuration file] **************************************************************************************************************************************************************************************************
+2024-05-25 15:05:23,329 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:23,404 p=8050 u=aizak n=ansible | TASK [Copy Alertmanager configuration file] ************************************************************************************************************************************************************************************************
+2024-05-25 15:05:26,156 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:26,216 p=8050 u=aizak n=ansible | TASK [Copy Blackbox Exporter configuration file] *******************************************************************************************************************************************************************************************
+2024-05-25 15:05:28,624 p=8050 u=aizak n=ansible | ok: [myserver]
+2024-05-25 15:05:28,656 p=8050 u=aizak n=ansible | TASK [Alert Rules] *************************************************************************************************************************************************************************************************************************
+2024-05-25 15:05:34,191 p=8050 u=aizak n=ansible | [0;31m--- before: /etc/prometheus/alert-rules.yml[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/tut/configs/prometheus/alert-rules.yml[0m
+[0;32m[0m[0;36m@@ -199,7 +199,7 @@[0m
+[0;36m[0m           severity: critical
+         annotations:
+           summary: Postgresql down (instance {{ .instance }})
+[0;31m-          description: "Postgresql instance is downn VALUE = {{ $value }}n LABELS = {{ $labels }}"[0m
+[0;31m[0m[0;32m+          description: "Postgresql instance is downn VALUE = {{ $value  }}n LABELS = {{ $labels }}"[0m
+[0;32m[0m 
+       - alert: PostgresqlRestarted
+         expr: time() - pg_postmaster_start_time_seconds < 60
+
+
+2024-05-25 15:05:34,193 p=8050 u=aizak n=ansible | changed: [myserver]
+2024-05-25 15:05:34,280 p=8050 u=aizak n=ansible | TASK [Restart Prometheus service] **********************************************************************************************************************************************************************************************************
+2024-05-25 15:05:36,454 p=8050 u=aizak n=ansible | changed: [myserver]
+2024-05-25 15:05:36,486 p=8050 u=aizak n=ansible | TASK [Restart Alertmanager service] ********************************************************************************************************************************************************************************************************
+2024-05-25 15:05:38,487 p=8050 u=aizak n=ansible | changed: [myserver]
+2024-05-25 15:05:38,516 p=8050 u=aizak n=ansible | TASK [Restart Blackbox Exporter service] ***************************************************************************************************************************************************************************************************
+2024-05-25 15:05:40,443 p=8050 u=aizak n=ansible | changed: [myserver]
+2024-05-25 15:05:40,489 p=8050 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************************************************************
+2024-05-25 15:05:40,489 p=8050 u=aizak n=ansible | myserver                   : ok=13   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-25 15:29:22,036 p=8800 u=aizak n=ansible | myserver | FAILED! => {
+    "msg": "Missing sudo password"
+}
+2024-05-25 15:31:00,352 p=8829 u=aizak n=ansible | myserver | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-05-27 11:59:55,609 p=7635 u=aizak n=ansible | PLAY [Install monitoring stack] ************************************************************************************
+2024-05-27 11:59:55,646 p=7635 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-27 12:00:05,703 p=7635 u=aizak n=ansible | fatal: [myserver]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.1.33 port 22: Connection timed out", "unreachable": true}
+2024-05-27 12:00:05,707 p=7635 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-27 12:00:05,707 p=7635 u=aizak n=ansible | myserver                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-27 12:01:52,136 p=7674 u=aizak n=ansible | PLAY [Install monitoring stack] ************************************************************************************
+2024-05-27 12:01:52,172 p=7674 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-27 12:02:02,221 p=7674 u=aizak n=ansible | fatal: [myserver]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 158.160.150.119 port 22: Connection timed out", "unreachable": true}
+2024-05-27 12:02:02,224 p=7674 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-27 12:02:02,225 p=7674 u=aizak n=ansible | myserver                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-27 12:46:42,073 p=8898 u=aizak n=ansible | myserver | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-05-27 12:47:22,124 p=8925 u=aizak n=ansible | PLAY [Install monitoring stack] ************************************************************************************
+2024-05-27 12:47:22,154 p=8925 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-27 12:47:25,368 p=8925 u=aizak n=ansible | ok: [myserver]
+2024-05-27 12:47:25,400 p=8925 u=aizak n=ansible | TASK [prometheus : Install] ****************************************************************************************
+2024-05-27 12:47:25,431 p=8925 u=aizak n=ansible | included: /home/aizak/sre_ansible/roles/prometheus/tasks/install.yml for myserver
+2024-05-27 12:47:25,444 p=8925 u=aizak n=ansible | TASK [prometheus : Add Prometheus repository] **********************************************************************
+2024-05-27 12:47:29,340 p=8925 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:47:29,366 p=8925 u=aizak n=ansible | TASK [prometheus : Add Alertmanager repository] ********************************************************************
+2024-05-27 12:47:32,558 p=8925 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:47:32,586 p=8925 u=aizak n=ansible | TASK [prometheus : Add Blackbox Exporter repository] ***************************************************************
+2024-05-27 12:47:35,819 p=8925 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:47:35,857 p=8925 u=aizak n=ansible | TASK [prometheus : Update apt cache] *******************************************************************************
+2024-05-27 12:48:08,657 p=8925 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'https://apt.releases.hashicorp.com bookworm Release' does not have a Release file."}
+2024-05-27 12:48:08,662 p=8925 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-27 12:48:08,663 p=8925 u=aizak n=ansible | myserver                   : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-27 12:52:26,785 p=9025 u=aizak n=ansible | PLAY [Install monitoring stack] ************************************************************************************
+2024-05-27 12:52:26,815 p=9025 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************
+2024-05-27 12:52:30,978 p=9025 u=aizak n=ansible | ok: [myserver]
+2024-05-27 12:52:31,005 p=9025 u=aizak n=ansible | TASK [prometheus : Install] ****************************************************************************************
+2024-05-27 12:52:31,035 p=9025 u=aizak n=ansible | included: /home/aizak/sre_ansible/roles/prometheus/tasks/install.yml for myserver
+2024-05-27 12:52:31,047 p=9025 u=aizak n=ansible | TASK [prometheus : Add Prometheus repository] **********************************************************************
+2024-05-27 12:52:34,627 p=9025 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:52:34,656 p=9025 u=aizak n=ansible | TASK [prometheus : Add Alertmanager repository] ********************************************************************
+2024-05-27 12:52:38,016 p=9025 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:52:38,042 p=9025 u=aizak n=ansible | TASK [prometheus : Add Blackbox Exporter repository] ***************************************************************
+2024-05-27 12:52:41,059 p=9025 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:52:41,086 p=9025 u=aizak n=ansible | TASK [prometheus : Update apt cache] *******************************************************************************
+2024-05-27 12:52:44,064 p=9025 u=aizak n=ansible | ok: [myserver]
+2024-05-27 12:52:44,095 p=9025 u=aizak n=ansible | TASK [prometheus : Install Prometheus, Alertmanager, and Blackbox Exporter] ****************************************
+2024-05-27 12:52:47,396 p=9025 u=aizak n=ansible | changed: [myserver] => (item=prometheus)
+2024-05-27 12:52:50,618 p=9025 u=aizak n=ansible | changed: [myserver] => (item=prometheus-alertmanager)
+2024-05-27 12:52:54,134 p=9025 u=aizak n=ansible | changed: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-27 12:52:54,162 p=9025 u=aizak n=ansible | TASK [prometheus : Configure] **************************************************************************************
+2024-05-27 12:52:54,189 p=9025 u=aizak n=ansible | included: /home/aizak/sre_ansible/roles/prometheus/tasks/configure.yml for myserver
+2024-05-27 12:52:54,205 p=9025 u=aizak n=ansible | TASK [prometheus : Copy Prometheus configuration file prometheus.yml.j2] *******************************************
+2024-05-27 12:52:54,605 p=9025 u=aizak n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-05-27 12:52:54,606 p=9025 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Could not find or access 'prometheus.yml.j2'\nSearched in:\n\t/home/aizak/sre_ansible/roles/prometheus/files/prometheus.yml.j2\n\t/home/aizak/sre_ansible/roles/prometheus/prometheus.yml.j2\n\t/home/aizak/sre_ansible/roles/prometheus/tasks/files/prometheus.yml.j2\n\t/home/aizak/sre_ansible/roles/prometheus/tasks/prometheus.yml.j2\n\t/home/aizak/sre_ansible/files/prometheus.yml.j2\n\t/home/aizak/sre_ansible/prometheus.yml.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-05-27 12:52:54,611 p=9025 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************
+2024-05-27 12:52:54,611 p=9025 u=aizak n=ansible | myserver                   : ok=8    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-27 12:57:29,890 p=9158 u=aizak n=ansible | PLAY [Install monitoring stack] ************************************************************************************************************************************************************************************************************
+2024-05-27 12:57:29,922 p=9158 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************************************
+2024-05-27 12:57:34,391 p=9158 u=aizak n=ansible | ok: [myserver]
+2024-05-27 12:57:34,422 p=9158 u=aizak n=ansible | TASK [prometheus : Install] ****************************************************************************************************************************************************************************************************************
+2024-05-27 12:57:34,452 p=9158 u=aizak n=ansible | included: /home/aizak/sre_ansible/roles/prometheus/tasks/install.yml for myserver
+2024-05-27 12:57:34,465 p=9158 u=aizak n=ansible | TASK [prometheus : Add Prometheus repository] **********************************************************************************************************************************************************************************************
+2024-05-27 12:57:37,894 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:57:37,924 p=9158 u=aizak n=ansible | TASK [prometheus : Add Alertmanager repository] ********************************************************************************************************************************************************************************************
+2024-05-27 12:57:40,920 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:57:40,953 p=9158 u=aizak n=ansible | TASK [prometheus : Add Blackbox Exporter repository] ***************************************************************************************************************************************************************************************
+2024-05-27 12:57:43,987 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:57:44,017 p=9158 u=aizak n=ansible | TASK [prometheus : Update apt cache] *******************************************************************************************************************************************************************************************************
+2024-05-27 12:57:46,913 p=9158 u=aizak n=ansible | ok: [myserver]
+2024-05-27 12:57:46,928 p=9158 u=aizak n=ansible | TASK [prometheus : Install Prometheus, Alertmanager, and Blackbox Exporter] ****************************************************************************************************************************************************************
+2024-05-27 12:57:50,164 p=9158 u=aizak n=ansible | changed: [myserver] => (item=prometheus)
+2024-05-27 12:57:53,308 p=9158 u=aizak n=ansible | changed: [myserver] => (item=prometheus-alertmanager)
+2024-05-27 12:57:56,378 p=9158 u=aizak n=ansible | changed: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-27 12:57:56,417 p=9158 u=aizak n=ansible | TASK [prometheus : Configure] **************************************************************************************************************************************************************************************************************
+2024-05-27 12:57:56,451 p=9158 u=aizak n=ansible | included: /home/aizak/sre_ansible/roles/prometheus/tasks/configure.yml for myserver
+2024-05-27 12:57:56,466 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Prometheus configuration file prometheus.yml.j2] *******************************************************************************************************************************************************************
+2024-05-27 12:57:58,329 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:57:58,358 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Prometheus configuration file prometheus.j2] ***********************************************************************************************************************************************************************
+2024-05-27 12:57:59,999 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:58:00,030 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Alertmanager configuration file alertmanager.yml.j2] ***************************************************************************************************************************************************************
+2024-05-27 12:58:01,587 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:58:01,619 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Alertmanager configuration file prometheus-alertmanager.j2] ********************************************************************************************************************************************************
+2024-05-27 12:58:03,245 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:58:03,274 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Blackbox Exporter configuration file blackbox.yml.j2] **************************************************************************************************************************************************************
+2024-05-27 12:58:04,981 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:58:05,010 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Blackbox Exporter configuration file prometheus-blackbox.j2] *******************************************************************************************************************************************************
+2024-05-27 12:58:06,804 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:58:06,838 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Alert Rules file] **************************************************************************************************************************************************************************************************
+2024-05-27 12:58:08,638 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:58:08,673 p=9158 u=aizak n=ansible | TASK [prometheus : Copy Node Exporter configuration file prometheus-node-exporter.j2] ******************************************************************************************************************************************************
+2024-05-27 12:58:10,502 p=9158 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:58:10,532 p=9158 u=aizak n=ansible | TASK [prometheus : Ensure prometheus service is started and enabled] ***********************************************************************************************************************************************************************
+2024-05-27 12:58:13,399 p=9158 u=aizak n=ansible | fatal: [myserver]: FAILED! => {"changed": false, "msg": "Could not find the requested service prometheus: host"}
+2024-05-27 12:58:13,401 p=9158 u=aizak n=ansible | RUNNING HANDLER [prometheus : prometheus_restart] ******************************************************************************************************************************************************************************************
+2024-05-27 12:58:13,406 p=9158 u=aizak n=ansible | RUNNING HANDLER [prometheus : prometheus_reload] *******************************************************************************************************************************************************************************************
+2024-05-27 12:58:13,407 p=9158 u=aizak n=ansible | RUNNING HANDLER [prometheus : alertmanager_restart] ****************************************************************************************************************************************************************************************
+2024-05-27 12:58:13,408 p=9158 u=aizak n=ansible | RUNNING HANDLER [prometheus : blackbox_restart] ********************************************************************************************************************************************************************************************
+2024-05-27 12:58:13,412 p=9158 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************************************************************
+2024-05-27 12:58:13,412 p=9158 u=aizak n=ansible | myserver                   : ok=16   changed=12   unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-05-27 12:59:02,913 p=9335 u=aizak n=ansible | PLAY [Install monitoring stack] ************************************************************************************************************************************************************************************************************
+2024-05-27 12:59:02,945 p=9335 u=aizak n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************************************************************
+2024-05-27 12:59:06,228 p=9335 u=aizak n=ansible | ok: [myserver]
+2024-05-27 12:59:06,280 p=9335 u=aizak n=ansible | TASK [prometheus : Install] ****************************************************************************************************************************************************************************************************************
+2024-05-27 12:59:06,334 p=9335 u=aizak n=ansible | included: /home/aizak/sre_ansible/roles/prometheus/tasks/install.yml for myserver
+2024-05-27 12:59:06,354 p=9335 u=aizak n=ansible | TASK [prometheus : Add Prometheus repository] **********************************************************************************************************************************************************************************************
+2024-05-27 12:59:31,237 p=9335 u=aizak n=ansible | The following additional packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-d3
+  libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys libjs-moment
+  libjs-moment-timezone libjs-mustache libjs-rickshaw libnvme1 libonig5
+  libopenipmi0 libsnmp-base libsnmp40 libtime-duration-perl moreutils nvme-cli
+  openipmi prometheus-node-exporter prometheus-node-exporter-collectors
+  smartmontools
+Suggested packages:
+  freeipmi-tools snmp-mibs-downloader gsmartcontrol smart-notifier mailx
+  | mailutils
+The following NEW packages will be installed:
+  fonts-glyphicons-halflings freeipmi-common ipmitool jq libfreeipmi17
+  libio-pty-perl libipc-run-perl libjq1 libjs-bootstrap libjs-d3
+  libjs-eonasdan-bootstrap-datetimepicker libjs-jquery-hotkeys libjs-moment
+  libjs-moment-timezone libjs-mustache libjs-rickshaw libnvme1 libonig5
+  libopenipmi0 libsnmp-base libsnmp40 libtime-duration-perl moreutils nvme-cli
+  openipmi prometheus prometheus-node-exporter
+  prometheus-node-exporter-collectors smartmontools
+0 upgraded, 29 newly installed, 0 to remove and 1 not upgraded.
+2024-05-27 12:59:31,238 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:59:31,262 p=9335 u=aizak n=ansible | TASK [prometheus : Add Alertmanager repository] ********************************************************************************************************************************************************************************************
+2024-05-27 12:59:36,392 p=9335 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-alertmanager
+0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+2024-05-27 12:59:36,393 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:59:36,415 p=9335 u=aizak n=ansible | TASK [prometheus : Add Blackbox Exporter repository] ***************************************************************************************************************************************************************************************
+2024-05-27 12:59:41,195 p=9335 u=aizak n=ansible | The following NEW packages will be installed:
+  prometheus-blackbox-exporter
+Preconfiguring packages ...
+0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+2024-05-27 12:59:41,196 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:59:41,217 p=9335 u=aizak n=ansible | TASK [prometheus : Update apt cache] *******************************************************************************************************************************************************************************************************
+2024-05-27 12:59:43,995 p=9335 u=aizak n=ansible | ok: [myserver]
+2024-05-27 12:59:44,022 p=9335 u=aizak n=ansible | TASK [prometheus : Install Prometheus, Alertmanager, and Blackbox Exporter] ****************************************************************************************************************************************************************
+2024-05-27 12:59:46,569 p=9335 u=aizak n=ansible | ok: [myserver] => (item=prometheus)
+2024-05-27 12:59:49,043 p=9335 u=aizak n=ansible | ok: [myserver] => (item=prometheus-alertmanager)
+2024-05-27 12:59:51,427 p=9335 u=aizak n=ansible | ok: [myserver] => (item=prometheus-blackbox-exporter)
+2024-05-27 12:59:51,452 p=9335 u=aizak n=ansible | TASK [prometheus : Configure] **************************************************************************************************************************************************************************************************************
+2024-05-27 12:59:51,484 p=9335 u=aizak n=ansible | included: /home/aizak/sre_ansible/roles/prometheus/tasks/configure.yml for myserver
+2024-05-27 12:59:51,500 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Prometheus configuration file prometheus.yml.j2] *******************************************************************************************************************************************************************
+2024-05-27 12:59:58,762 p=9335 u=aizak n=ansible | [0;31m--- before: /etc/prometheus/prometheus.yml[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/prometheus.yml.j2[0m
+[0;32m[0m[0;36m@@ -1,44 +1,42 @@[0m
+[0;36m[0m[0;31m-# Sample config for Prometheus.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m global:
+[0;31m-  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.[0m
+[0;31m[0m[0;31m-  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.[0m
+[0;31m[0m[0;31m-  # scrape_timeout is set to the global default (10s).[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # Attach these labels to any time series or alerts when communicating with[0m
+[0;31m[0m[0;31m-  # external systems (federation, remote storage, Alertmanager).[0m
+[0;31m[0m[0;32m+  scrape_interval: 15s[0m
+[0;32m[0m[0;32m+  evaluation_interval: 15s[0m
+[0;32m[0m   external_labels:
+[0;31m-      monitor: 'example'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# Alertmanager configuration[0m
+[0;31m[0m[0;32m+    monitor: 'example'[0m
+[0;32m[0m alerting:
+   alertmanagers:
+[0;31m-  - static_configs:[0m
+[0;31m[0m[0;31m-    - targets: ['localhost:9093'][0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.[0m
+[0;31m[0m[0;32m+    - static_configs:[0m
+[0;32m[0m[0;32m+        - targets: ['localhost:9093'][0m
+[0;32m[0m rule_files:
+[0;31m-  # - "first_rules.yml"[0m
+[0;31m[0m[0;31m-  # - "second_rules.yml"[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# A scrape configuration containing exactly one endpoint to scrape:[0m
+[0;31m[0m[0;31m-# Here it's Prometheus itself.[0m
+[0;31m[0m[0;32m+  - "alert-rules.yml"[0m
+[0;32m[0m scrape_configs:
+[0;31m-  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.[0m
+[0;31m[0m   - job_name: 'prometheus'
+[0;31m-[0m
+[0;31m[0m[0;31m-    # Override the global default and scrape targets from this job every 5 seconds.[0m
+[0;31m[0m     scrape_interval: 5s
+     scrape_timeout: 5s
+[0;31m-[0m
+[0;31m[0m[0;31m-    # metrics_path defaults to '/metrics'[0m
+[0;31m[0m[0;31m-    # scheme defaults to 'http'.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m     static_configs:
+       - targets: ['localhost:9090']
+[0;31m-[0m
+[0;31m[0m   - job_name: node
+[0;31m-    # If prometheus-node-exporter is installed, grab stats about the local[0m
+[0;31m[0m[0;31m-    # machine by default.[0m
+[0;31m[0m     static_configs:
+       - targets: ['localhost:9100']
+[0;32m+  - job_name: 'blackboxcheck'[0m
+[0;32m[0m[0;32m+    metrics_path: /probe[0m
+[0;32m[0m[0;32m+    params:[0m
+[0;32m[0m[0;32m+      module: [http_2xx][0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9100', 'mail.ru'][0m
+[0;32m[0m[0;32m+    relabel_configs:[0m
+[0;32m[0m[0;32m+      - source_labels: [__address__][0m
+[0;32m[0m[0;32m+        target_label: __param_target[0m
+[0;32m[0m[0;32m+      - source_labels: [__param_target][0m
+[0;32m[0m[0;32m+        target_label: instance[0m
+[0;32m[0m[0;32m+      - target_label: __address__[0m
+[0;32m[0m[0;32m+        replacement: 127.0.0.1:9115[0m
+[0;32m[0m[0;32m+  - job_name: 'grafana'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:3000'][0m
+[0;32m[0m[0;32m+  - job_name: postgresql[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:9187'][0m
+[0;32m[0m[0;32m+  - job_name: 'nginx'[0m
+[0;32m[0m[0;32m+    static_configs:[0m
+[0;32m[0m[0;32m+      - targets: ['localhost:80'][0m
+[0;32m[0m
+
+2024-05-27 12:59:58,763 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 12:59:58,799 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Prometheus configuration file prometheus.j2] ***********************************************************************************************************************************************************************
+2024-05-27 13:00:04,672 p=9335 u=aizak n=ansible | [0;31m--- before: /etc/default/prometheus[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/prometheus.j2[0m
+[0;32m[0m[0;36m@@ -3,3 +3,4 @@[0m
+[0;36m[0m # them (\\d for \d). If running under systemd, you need to double them again
+ # (\\\\d to mean \d), and escape newlines too.
+ ARGS=""
+[0;32m+PROMETHEUS_OPTS='--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus/data --web.console.libraries=/usr/share/prometheus/console_libraries --web.console.templates=/usr/share/prometheus/consoles --web.route-prefix=/ --web.external-url=http://158.160.150.119/prometheus/'[0m
+[0;32m[0m
+
+2024-05-27 13:00:04,673 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:04,684 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Alertmanager configuration file alertmanager.yml.j2] ***************************************************************************************************************************************************************
+2024-05-27 13:00:10,632 p=9335 u=aizak n=ansible | [0;31m--- before: /etc/prometheus/alertmanager.yml[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/alertmanager.yml.j2[0m
+[0;32m[0m[0;36m@@ -1,116 +1,15 @@[0m
+[0;36m[0m[0;31m-# Sample configuration.[0m
+[0;31m[0m[0;31m-# See https://prometheus.io/docs/alerting/configuration/ for documentation.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-global:[0m
+[0;31m[0m[0;31m-  # The smarthost and SMTP sender used for mail notifications.[0m
+[0;31m[0m[0;31m-  smtp_smarthost: 'localhost:25'[0m
+[0;31m[0m[0;31m-  smtp_from: 'alertmanager@example.org'[0m
+[0;31m[0m[0;31m-  smtp_auth_username: 'alertmanager'[0m
+[0;31m[0m[0;31m-  smtp_auth_password: 'password'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# The directory from which notification templates are read.[0m
+[0;31m[0m[0;31m-templates: [0m
+[0;31m[0m[0;31m-- '/etc/prometheus/alertmanager_templates/*.tmpl'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# The root route on which each incoming alert enters.[0m
+[0;31m[0m route:
+[0;31m-  # The labels by which incoming alerts are grouped together. For example,[0m
+[0;31m[0m[0;31m-  # multiple alerts coming in for cluster=A and alertname=LatencyHigh would[0m
+[0;31m[0m[0;31m-  # be batched into a single group.[0m
+[0;31m[0m[0;31m-  group_by: ['alertname', 'cluster', 'service'][0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # When a new group of alerts is created by an incoming alert, wait at[0m
+[0;31m[0m[0;31m-  # least 'group_wait' to send the initial notification.[0m
+[0;31m[0m[0;31m-  # This way ensures that you get multiple alerts for the same group that start[0m
+[0;31m[0m[0;31m-  # firing shortly after another are batched together on the first [0m
+[0;31m[0m[0;31m-  # notification.[0m
+[0;31m[0m[0;31m-  group_wait: 30s[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # When the first notification was sent, wait 'group_interval' to send a batch[0m
+[0;31m[0m[0;31m-  # of new alerts that started firing for that group.[0m
+[0;31m[0m[0;31m-  group_interval: 5m[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # If an alert has successfully been sent, wait 'repeat_interval' to[0m
+[0;31m[0m[0;31m-  # resend them.[0m
+[0;31m[0m[0;31m-  repeat_interval: 3h [0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # A default receiver[0m
+[0;31m[0m[0;31m-  receiver: team-X-mails[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # All the above attributes are inherited by all child routes and can [0m
+[0;31m[0m[0;31m-  # overwritten on each.[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # The child route trees.[0m
+[0;31m[0m[0;31m-  routes:[0m
+[0;31m[0m[0;31m-  # This routes performs a regular expression match on alert labels to[0m
+[0;31m[0m[0;31m-  # catch alerts that are related to a list of services.[0m
+[0;31m[0m[0;31m-  - match_re:[0m
+[0;31m[0m[0;31m-      service: ^(foo1|foo2|baz)$[0m
+[0;31m[0m[0;31m-    receiver: team-X-mails[0m
+[0;31m[0m[0;31m-    # The service has a sub-route for critical alerts, any alerts[0m
+[0;31m[0m[0;31m-    # that do not match, i.e. severity != critical, fall-back to the[0m
+[0;31m[0m[0;31m-    # parent node and are sent to 'team-X-mails'[0m
+[0;31m[0m[0;31m-    routes:[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        severity: critical[0m
+[0;31m[0m[0;31m-      receiver: team-X-pager[0m
+[0;31m[0m[0;31m-  - match:[0m
+[0;31m[0m[0;31m-      service: files[0m
+[0;31m[0m[0;31m-    receiver: team-Y-mails[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    routes:[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        severity: critical[0m
+[0;31m[0m[0;31m-      receiver: team-Y-pager[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  # This route handles all alerts coming from a database service. If there's[0m
+[0;31m[0m[0;31m-  # no team to handle it, it defaults to the DB team.[0m
+[0;31m[0m[0;31m-  - match:[0m
+[0;31m[0m[0;31m-      service: database[0m
+[0;31m[0m[0;31m-    receiver: team-DB-pager[0m
+[0;31m[0m[0;31m-    # Also group alerts by affected database.[0m
+[0;31m[0m[0;31m-    group_by: [alertname, cluster, database][0m
+[0;31m[0m[0;31m-    routes:[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        owner: team-X[0m
+[0;31m[0m[0;31m-      receiver: team-X-pager[0m
+[0;31m[0m[0;31m-    - match:[0m
+[0;31m[0m[0;31m-        owner: team-Y[0m
+[0;31m[0m[0;31m-      receiver: team-Y-pager[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-# Inhibition rules allow to mute a set of alerts given that another alert is[0m
+[0;31m[0m[0;31m-# firing.[0m
+[0;31m[0m[0;31m-# We use this to mute any warning-level notifications if the same alert is [0m
+[0;31m[0m[0;31m-# already critical.[0m
+[0;31m[0m[0;31m-inhibit_rules:[0m
+[0;31m[0m[0;31m-- source_match:[0m
+[0;31m[0m[0;31m-    severity: 'critical'[0m
+[0;31m[0m[0;31m-  target_match:[0m
+[0;31m[0m[0;31m-    severity: 'warning'[0m
+[0;31m[0m[0;31m-  # Apply inhibition if the alertname is the same.[0m
+[0;31m[0m[0;31m-  equal: ['alertname', 'cluster', 'service'][0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;32m+  group_by: ['alertname'][0m
+[0;32m[0m[0;32m+  group_wait: 10s[0m
+[0;32m[0m[0;32m+  group_interval: 10s[0m
+[0;32m[0m[0;32m+  repeat_interval: 5m[0m
+[0;32m[0m[0;32m+  receiver: 'telegram'[0m
+[0;32m[0m 
+ receivers:
+[0;31m-- name: 'team-X-mails'[0m
+[0;31m[0m[0;31m-  email_configs:[0m
+[0;31m[0m[0;31m-  - to: 'team-X+alerts@example.org'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-X-pager'[0m
+[0;31m[0m[0;31m-  email_configs:[0m
+[0;31m[0m[0;31m-  - to: 'team-X+alerts-critical@example.org'[0m
+[0;31m[0m[0;31m-  pagerduty_configs:[0m
+[0;31m[0m[0;31m-  - service_key: <team-X-key>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-Y-mails'[0m
+[0;31m[0m[0;31m-  email_configs:[0m
+[0;31m[0m[0;31m-  - to: 'team-Y+alerts@example.org'[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-Y-pager'[0m
+[0;31m[0m[0;31m-  pagerduty_configs:[0m
+[0;31m[0m[0;31m-  - service_key: <team-Y-key>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-- name: 'team-DB-pager'[0m
+[0;31m[0m[0;31m-  pagerduty_configs:[0m
+[0;31m[0m[0;31m-  - service_key: <team-DB-key>[0m
+[0;31m[0m[0;32m+  - name: 'telegram'[0m
+[0;32m[0m[0;32m+    telegram_configs:[0m
+[0;32m[0m[0;32m+      - bot_token: '7155226222:AAGoBdtE1aguTiXQsJRqEWmuynKwuMpq9Bw'[0m
+[0;32m[0m[0;32m+        api_url: 'https://api.telegram.org'[0m
+[0;32m[0m[0;32m+        chat_id: -1002099863732[0m
+[0;32m[0m[0;32m+        parse_mode: ''[0m
+[0;32m[0m[0;32m+        message: "Alertmanager \n------------------ \n Alertname: {{  .GroupLabels.alertname}}\n Severity:{{ .CommonLabels.severity }}\n Instance: {{ .CommonLabels.instance }}\n Description: {{ .CommonAnnotations.description }}"[0m
+[0;32m[0m
+
+2024-05-27 13:00:10,634 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:10,662 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Alertmanager configuration file prometheus-alertmanager.j2] ********************************************************************************************************************************************************
+2024-05-27 13:00:16,774 p=9335 u=aizak n=ansible | [0;31m--- before: /etc/default/prometheus-alertmanager[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/prometheus-alertmanager.j2[0m
+[0;32m[0m[0;36m@@ -3,3 +3,6 @@[0m
+[0;36m[0m # them (\\d for \d). If running under systemd, you need to double them again
+ # (\\\\d to mean \d), and escape newlines too.
+ ARGS=""
+[0;32m+ALERTMANAGER_OPTS="--config.file=/etc/prometheus/alertmanager.yml[0m
+[0;32m[0m[0;32m+--storage.path=/var/lib/prometheus/alertmanager --web.route-prefix=/[0m
+[0;32m[0m[0;32m+--web.external-url=http://158.160.150.119/alertmanager/ --log.level=debug"[0m
+[0;32m[0m
+
+2024-05-27 13:00:16,775 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:16,807 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Blackbox Exporter configuration file blackbox.yml.j2] **************************************************************************************************************************************************************
+2024-05-27 13:00:22,603 p=9335 u=aizak n=ansible | [0;31m--- before: /etc/prometheus/blackbox.yml[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/blackbox.yml.j2[0m
+[0;32m[0m[0;36m@@ -1,6 +1,9 @@[0m
+[0;36m[0m modules:
+   http_2xx:
+     prober: http
+[0;32m+    http:[0m
+[0;32m[0m[0;32m+      ip_protocol_fallback: true[0m
+[0;32m[0m[0;32m+      preferred_ip_protocol: "ip4"[0m
+[0;32m[0m   http_post_2xx:
+     prober: http
+     http:
+[0;36m@@ -46,4 +49,4 @@[0m
+[0;36m[0m     prober: icmp
+     timeout: 5s
+     icmp:
+[0;31m-      ttl: 5[0m
+[0;31m\ No newline at end of file[0m
+[0;31m[0m[0;32m+      ttl: 5[0m
+[0;32m[0m
+
+2024-05-27 13:00:22,604 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:22,635 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Blackbox Exporter configuration file prometheus-blackbox.j2] *******************************************************************************************************************************************************
+2024-05-27 13:00:28,579 p=9335 u=aizak n=ansible | [0;31m--- before: /etc/default/prometheus-blackbox-exporter[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/prometheus-blackbox-exporter.j2[0m
+[0;32m[0m[0;36m@@ -5,3 +5,5 @@[0m
+[0;36m[0m # On sysvinit systems, when changing the configuration pathname also
+ # change it in the init script.
+ ARGS="--config.file /etc/prometheus/blackbox.yml"
+[0;32m+BLACKBOX_EXPORTER_OPTS="--config.file=/etc/prometheus/blackbox.yml[0m
+[0;32m[0m[0;32m+--web.route-prefix=/ --web.external-url=http://158.160.150.119/blackbox/"[0m
+[0;32m[0m
+
+2024-05-27 13:00:28,580 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:28,610 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Alert Rules file] **************************************************************************************************************************************************************************************************
+2024-05-27 13:00:33,378 p=9335 u=aizak n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/alert-rules.yml.j2[0m
+[0;32m[0m[0;36m@@ -0,0 +1,221 @@[0m
+[0;36m[0m[0;32m+groups:[0m
+[0;32m[0m[0;32m+  - name: Critical alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: InstanceDown[0m
+[0;32m[0m[0;32m+        expr: up == 0[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute."[0m
+[0;32m[0m[0;32m+          summary: Instance {{ $labels.instance }} downestart=on-failure[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PrometheusConfigurationReloadFailure[0m
+[0;32m[0m[0;32m+        expr: prometheus_config_last_reload_successful != 1[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          project: "{{$labels.project}}"[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: Prometheus configuration reload failure[0m
+[0;32m[0m[0;32m+          description: "Prometheus configuration reload error"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PrometheusTooManyRestarts[0m
+[0;32m[0m[0;32m+        expr: changes(process_start_time_seconds{job=~"prometheus|alertmanager"}[15m]) > 2[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          project: "{{$labels.project}}"[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Prometheus too many restarts[0m
+[0;32m[0m[0;32m+          description: "Prometheus has restarted more than twice in the last 15 minutes. It might be crashlooping"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PrometheusNotificationsFailed[0m
+[0;32m[0m[0;32m+        expr: sum(increase(alertmanager_notifications_failed_total{integration="webhook"}[5m])) by (integration, job) > 40[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          project: "{{$labels.project}}"[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Prometheus too many failed notifications[0m
+[0;32m[0m[0;32m+          description: "Prometheus too many failed notifications"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: Systemd alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: SystemdServiceFailed[0m
+[0;32m[0m[0;32m+        expr: node_systemd_unit_state{state="failed", name!="dnf-makecache.service"} == 1[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: "{{ $labels.name }} failed"[0m
+[0;32m[0m[0;32m+          description: "systemd service {{ $labels.name }} failed"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: DiskBusy[0m
+[0;32m[0m[0;32m+        expr: rate(node_disk_io_time_seconds_total{device!~"(md|dm).*"}[5m]) * 100 > 90[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: '{{ $labels.device }} busy {{ $value | printf "%.0f"}}%'[0m
+[0;32m[0m[0;32m+          description: 'Disk {{ $labels.device }} busy {{ $value |printf "%.0f"}}%'[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostOutOfMemory[0m
+[0;32m[0m[0;32m+        expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes *100 < 10)[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: 'Host out of memory ({{ $value | printf "%.0f"}}%)'[0m
+[0;32m[0m[0;32m+          description: 'Node memory is filling up ({{ $value | printf "%.0f"}}%< 10%)'[0m
+[0;32m[0m[0;32m+      - alert: SystemLoad_5m[0m
+[0;32m[0m[0;32m+        expr: (avg by(job,instance) (node_load5) / count by(job,instance)(count by(cpu,job,instance) (node_cpu_seconds_total)) * 100) >= 100[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: "{{ if ge $value 105.0 }}critical{{ else }}warning{{ end}}"[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: 'System Load 5m: {{ $value | printf "%.0f"}}%'[0m
+[0;32m[0m[0;32m+          description: 'System Load 5m too high ({{ $value | printf "%.0f"}}%)for 1 minutes'[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: BlackBox alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeFailed[0m
+[0;32m[0m[0;32m+        expr: probe_success{} != 1[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          title: "Blackbox probe failed. {{$labels.instance }}"[0m
+[0;32m[0m[0;32m+          description: "Blackbox probe failed (instance {{ $labels.instance}})"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeHttpFailure[0m
+[0;32m[0m[0;32m+        expr: probe_http_status_code <= 199 OR probe_http_status_code >= 400[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Blackbox probe HTTP failure (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "HTTP status code is not 200-399\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeSlowPing[0m
+[0;32m[0m[0;32m+        expr: avg_over_time(probe_icmp_duration_seconds[1m]) > 1[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Blackbox probe slow ping (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Blackbox ping took more than 1s\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: BlackboxProbeSlowHttp[0m
+[0;32m[0m[0;32m+        expr: avg_over_time(probe_http_duration_seconds[1m]) > 1[0m
+[0;32m[0m[0;32m+        for: 1m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Blackbox probe slow HTTP (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "HTTP request took more than 1s\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: Hardware alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: DiskSpace50%Free[0m
+[0;32m[0m[0;32m+        expr: node_exporter:node_filesystem_free:fs_used_percents >= 50[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: moderate[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: "Instance {{ $labels.instance }} is half or lower on disk space"[0m
+[0;32m[0m[0;32m+          description: "{{ $labels.instance }} has only {{ $value }}% free."[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HighCpuLoad[0m
+[0;32m[0m[0;32m+        expr: (sum by (instance) (avg by (mode, instance) (rate(node_cpu_seconds_total{mode!="idle"}[2m]))) > 0.8) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host high CPU load (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "CPU load is > 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostPhysicalComponentTooHot[0m
+[0;32m[0m[0;32m+        expr: ((node_hwmon_temp_celsius * ignoring(label) group_left(instance, job, node, sensor) node_hwmon_sensor_label{label!="tctl"} > 75)) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 5m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host physical component too hot (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Physical hardware component too hot\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostNetworkBondDegraded[0m
+[0;32m[0m[0;32m+        expr: (node_bonding_active - node_bonding_slaves) != 0[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host Network Bond Degraded (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Bond \"{{ $labels.device }}\" degraded on \"{{ $labels.instance }}\".\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostClockNotSynchronising[0m
+[0;32m[0m[0;32m+        expr: min_over_time(node_timex_sync_status[1m]) == 0 and node_timex_maxerror_seconds >= 16[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host clock not synchronising (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Clock not synchronising. Ensure NTP is configured on this host.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostOutOfDiskSpace[0m
+[0;32m[0m[0;32m+        expr: ((node_filesystem_avail_bytes * 100) / node_filesystem_size_bytes < 10 and ON (instance, device, mountpoint) node_filesystem_readonly == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host out of disk space (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Disk is almost full (< 10% left)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostOutOfInodes[0m
+[0;32m[0m[0;32m+        expr: (node_filesystem_files_free{fstype!="msdosfs"} / node_filesystem_files{fstype!="msdosfs"} * 100 < 10 and ON (instance, device, mountpoint) node_filesystem_readonly == 0) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 2m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host out of inodes (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Disk is almost running out of available inodes (< 10% left)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: HostClockSkew[0m
+[0;32m[0m[0;32m+        expr: ((node_timex_offset_seconds > 0.05 and deriv(node_timex_offset_seconds[5m]) >= 0) or (node_timex_offset_seconds < -0.05 and deriv(node_timex_offset_seconds[5m]) <= 0)) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}[0m
+[0;32m[0m[0;32m+        for: 10m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: warning[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Host clock skew (instance {{ $labels.instance }})[0m
+[0;32m[0m[0;32m+          description: "Clock skew detected. Clock is out of sync. Ensure NTP is configured correctly on this host.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+  - name: Postgres alerts[0m
+[0;32m[0m[0;32m+    rules:[0m
+[0;32m[0m[0;32m+      - alert: PostgresqlDown[0m
+[0;32m[0m[0;32m+        expr: pg_up == 0[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Postgresql down (instance {{ .instance }})[0m
+[0;32m[0m[0;32m+          description: "Postgresql instance is downn VALUE = {{ $value  }}n LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PostgresqlRestarted[0m
+[0;32m[0m[0;32m+        expr: time() - pg_postmaster_start_time_seconds < 60[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Postgresql restarted (instance {{ .instance }})[0m
+[0;32m[0m[0;32m+          description: "Postgresql restartedn VALUE = {{ $value }}n LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m[0;32m+      - alert: PostgresqlExporterError[0m
+[0;32m[0m[0;32m+        expr: pg_exporter_last_scrape_error > 0[0m
+[0;32m[0m[0;32m+        for: 0m[0m
+[0;32m[0m[0;32m+        labels:[0m
+[0;32m[0m[0;32m+          severity: critical[0m
+[0;32m[0m[0;32m+        annotations:[0m
+[0;32m[0m[0;32m+          summary: Postgresql exporter error (instance {{ .instance }})[0m
+[0;32m[0m[0;32m+          description: "Postgresql exporter is showing errors. A query may be buggy in query.yamln VALUE = {{ $value }}n LABELS = {{ $labels }}"[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m
+
+2024-05-27 13:00:33,379 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:33,425 p=9335 u=aizak n=ansible | TASK [prometheus : Copy Node Exporter configuration file prometheus-node-exporter.j2] ******************************************************************************************************************************************************
+2024-05-27 13:00:39,664 p=9335 u=aizak n=ansible | [0;31m--- before: /etc/default/prometheus-node-exporter[0m
+[0;31m[0m[0;32m+++ after: /home/aizak/sre_ansible/roles/prometheus/templates/prometheus-node-exporter.j2[0m
+[0;32m[0m[0;36m@@ -3,3 +3,8 @@[0m
+[0;36m[0m # them (\\d for \d). If running under systemd, you need to double them again
+ # (\\\\d to mean \d), and escape newlines too.
+ ARGS=""
+[0;32m+PROMETHEUS_OPTS='--config.file=/etc/prometheus/prometheus.yml[0m
+[0;32m[0m[0;32m+--storage.tsdb.path=/var/lib/prometheus/data[0m
+[0;32m[0m[0;32m+--web.console.libraries=/usr/share/prometheus/console_libraries[0m
+[0;32m[0m[0;32m+--web.console.templates=/usr/share/prometheus/consoles[0m
+[0;32m[0m[0;32m+--web.route-prefix=/ --web.external-url=http://158.160.150.119/prometheus/'[0m
+[0;32m[0m
+
+2024-05-27 13:00:39,666 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:39,705 p=9335 u=aizak n=ansible | TASK [prometheus : Ensure prometheus service is started and enabled] ***********************************************************************************************************************************************************************
+2024-05-27 13:00:42,895 p=9335 u=aizak n=ansible | ok: [myserver]
+2024-05-27 13:00:42,933 p=9335 u=aizak n=ansible | RUNNING HANDLER [prometheus : prometheus_restart] ******************************************************************************************************************************************************************************************
+2024-05-27 13:00:46,649 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:46,651 p=9335 u=aizak n=ansible | RUNNING HANDLER [prometheus : prometheus_reload] *******************************************************************************************************************************************************************************************
+2024-05-27 13:00:49,076 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:49,077 p=9335 u=aizak n=ansible | RUNNING HANDLER [prometheus : alertmanager_restart] ****************************************************************************************************************************************************************************************
+2024-05-27 13:00:51,467 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:51,468 p=9335 u=aizak n=ansible | RUNNING HANDLER [prometheus : blackbox_restart] ********************************************************************************************************************************************************************************************
+2024-05-27 13:00:53,793 p=9335 u=aizak n=ansible | changed: [myserver]
+2024-05-27 13:00:53,823 p=9335 u=aizak n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************************************************************
+2024-05-27 13:00:53,824 p=9335 u=aizak n=ansible | myserver                   : ok=21   changed=15   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,0 +1,67 @@
+- name: my playbook
+  hosts: myserver
+  become: yes
+
+  tasks:
+    - name: Add Prometheus repository
+      ansible.builtin.apt:
+        name: prometheus
+        state: present
+
+    - name: Add Alertmanager repository
+      ansible.builtin.apt:
+        name: prometheus-alertmanager
+        state: present
+
+    - name: Add Blackbox Exporter repository
+      ansible.builtin.apt:
+        name: prometheus-blackbox-exporter
+        state: present
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Prometheus, Alertmanager, and Blackbox Exporter
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - prometheus
+        - prometheus-alertmanager
+        - prometheus-blackbox-exporter
+
+    - name: Copy Prometheus configuration file
+      copy:
+        src: /home/aizak/tut/configs/prometheus/prometheus.yml
+        dest: /etc/prometheus/prometheus.yml
+
+    - name: Copy Alertmanager configuration file
+      copy:
+        src: /home/aizak/tut/configs/prometheus/alertmanager.yml
+        dest: /etc/prometheus/alertmanager.yml
+
+    - name: Copy Blackbox Exporter configuration file
+      copy:
+        src: /home/aizak/tut/configs/prometheus/blackbox.yml
+        dest: /etc/prometheus/blackbox_exporter.yml
+
+    - name: Alert Rules
+      copy:
+        src: /home/aizak/tut/configs/prometheus/alert-rules.yml
+        dest: /etc/prometheus/alert-rules.yml
+
+    - name: Restart Prometheus service
+      service:
+        name: prometheus
+        state: restarted
+
+    - name: Restart Alertmanager service
+      service:
+        name: prometheus-alertmanager
+        state: restarted
+
+    - name: Restart Blackbox Exporter service
+      service:
+        name: prometheus-blackbox-exporter
+        state: restarted

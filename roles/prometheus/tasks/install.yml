@@ -1,0 +1,29 @@
+---
+- name: Add Prometheus repository
+  ansible.builtin.apt:
+    name: prometheus
+    state: present
+
+- name: Add Alertmanager repository
+  ansible.builtin.apt:
+    name: prometheus-alertmanager
+    state: present
+
+- name: Add Blackbox Exporter repository
+  ansible.builtin.apt:
+    name: prometheus-blackbox-exporter
+    state: present
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install Prometheus, Alertmanager, and Blackbox Exporter
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - prometheus
+    - prometheus-alertmanager
+    - prometheus-blackbox-exporter
+

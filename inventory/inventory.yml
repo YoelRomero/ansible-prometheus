@@ -1,0 +1,9 @@
+ungrouped:
+  hosts:
+    myserver:
+      ansible_host: 158.160.150.119
+      ansible_user: tester
+      #ansible_host: 192.168.1.33
+      #ansible_user: admini
+      ansible_become: true
+      ansible_become_method: sudo
