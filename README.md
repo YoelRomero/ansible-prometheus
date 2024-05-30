@@ -34,6 +34,6 @@ BSD
 
 Author Information
 ------------------
-
+Command for start and check: ansible-palybook -i ./inventory/inventory.yml palybook.yml --diff (--check)
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
 # ansible-prometheus
