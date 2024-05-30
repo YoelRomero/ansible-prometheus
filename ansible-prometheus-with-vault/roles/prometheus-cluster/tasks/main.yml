@@ -1,0 +1,129 @@
+---
+
+# tasks file for prometheus-cluster
+
+- name: Install Prometheus
+  ansible.builtin.apt:
+    name: prometheus
+    state: present
+    policy_rc_d: 101
+  notify:
+    - Restart Prometheus
+  
+- name: Install Blackbox Exporter
+  ansible.builtin.apt:
+    name: prometheus-blackbox-exporter
+    state: present
+    policy_rc_d: 101
+  notify:
+    - Restart Blackbox
+
+- name: Install Alertmanager
+  ansible.builtin.apt:
+    name: prometheus-alertmanager
+    state: present
+    policy_rc_d: 101
+  notify:
+    - Restart Alertmanager
+
+- name: Prometheus Set-Up 
+  ansible.builtin.copy:
+    src: prometheus.yml
+    dest: "{{ prometheus_configuration }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Update Prometheus Configuration via Reload
+
+- name: Node Exporter Set-Up
+  ansible.builtin.template:
+    src: node_exporter.j2
+    dest: "{{ node_exporter_daemon_configuration }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Prometheus
+
+- name: BlackBox Exporter Set-Up
+  ansible.builtin.copy:
+    src: blackbox.yml
+    dest: "{{ blackbox_exporter_configuration }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Blackbox
+
+- name: Alertmanager Set-Up
+  ansible.builtin.template:
+    src: alertmanager.yml.j2
+    dest: "{{ alertmanager_configuration }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Alertmanager
+
+- name: Alert Rules Set-Up
+  ansible.builtin.copy:
+    src: alert-rules.yml
+    dest: "{{ alert_rules_list }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Alertmanager
+
+- name: Prometheus Daemon Set-Up
+  ansible.builtin.template:
+    src: prometheus.j2
+    dest: "{{ prometheus_daemon_configuration }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Prometheus
+
+- name: Blackbox Exporter Daemon Set-Up
+  ansible.builtin.template:
+    src: blackbox_exporter.j2
+    dest: "{{ blackbox_exporter_daemon_configuration }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Blackbox
+
+- name: Alertmanager Daemon Set-Up
+  ansible.builtin.template:
+    src: alertmanager.j2
+    dest: "{{ alertmanager_daemon_configuration }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Alertmanager
+
+- name: Enable Prometheus Daemon
+  ansible.builtin.service:
+    name: prometheus
+    state: started
+    enabled: true
+    masked: no
+
+- name: Enable Blackbox Exporter Daemon
+  ansible.builtin.service:    
+    name: prometheus-blackbox-exporter
+    state: started
+    enabled: true
+    masked: no
+
+- name: Enable Alertmanager Daemon
+  ansible.builtin.service:    
+    name: prometheus-alertmanager
+    state: started
+    enabled: true
+    masked: no
+

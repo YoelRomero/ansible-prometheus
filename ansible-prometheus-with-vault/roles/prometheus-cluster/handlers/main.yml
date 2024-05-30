@@ -1,0 +1,23 @@
+---
+
+# handlers file for prometheus-cluster
+
+- name: Restart Prometheus
+  ansible.builtin.service:
+    name: prometheus
+    state: restarted
+
+- name: Restart Blackbox
+  ansible.builtin.service:
+    name: prometheus-blackbox-exporter
+    state: restarted
+
+- name: Restart Alertmanager
+  ansible.builtin.service:
+    name: prometheus-alertmanager
+    state: restarted
+
+- name: Update Prometheus Configuration via Reload
+  ansible.builtin.service:
+    name: prometheus
+    state: reloaded

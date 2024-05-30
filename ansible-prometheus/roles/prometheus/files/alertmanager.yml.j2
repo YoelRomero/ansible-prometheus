@@ -8,8 +8,8 @@ route:
 receivers:
   - name: 'telegram'
     telegram_configs:
-      - bot_token: '7155226222:AAGoBdtE1aguTiXQsJRqEWmuynKwuMpq9Bw'
+      - bot_token: ''
         api_url: 'https://api.telegram.org'
-        chat_id: -1002099863732
+        chat_id: 
         parse_mode: ''
         message: "Alertmanager \n------------------ \n Alertname: {{  .GroupLabels.alertname}}\n Severity:{{ .CommonLabels.severity }}\n Instance: {{ .CommonLabels.instance }}\n Description: {{ .CommonAnnotations.description }}"

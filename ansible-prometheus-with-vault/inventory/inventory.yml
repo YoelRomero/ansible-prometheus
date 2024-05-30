@@ -1,0 +1,10 @@
+---
+  ungrouped:
+    hosts:
+      roflan:
+        ansible_host: 192.168.0.38 #192.168.1.21
+        ansible_user: admini
+        ansible_become: true
+        ansible_become_method: sudo
+        #ansible_ssh_private_key: /root/.ssh/id_rsa
+        

@@ -1,0 +1,26 @@
+---
+
+# vars file for prometheus-cluster
+
+# server IP
+
+server_ip: 192.168.0.38 #79.137.157.21
+
+# yml configuration for prometheus-cluster 
+
+prometheus_configuration:  /etc/prometheus/prometheus.yml
+blackbox_exporter_configuration: /etc/prometheus/blackbox_exporter.yml
+alertmanager_configuration: /etc/prometheus/alertmanager.yml
+
+# yml alert rules list for alertmanager
+
+alert_rules_list:  /etc/prometheus/alert-rules.yml
+
+# daemon-services configuration for prometheus-cluster
+
+prometheus_daemon_configuration: /etc/default/prometheus
+node_exporter_daemon_configuration: /etc/default/node_exporter
+blackbox_exporter_daemon_configuration: /etc/default/blackbox_exporter
+alertmanager_daemon_configuration: /etc/default/alertmanager
+
+

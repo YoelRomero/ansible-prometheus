@@ -1,0 +1,10 @@
+---
+- name: Install and Configure Prometheus Cluster (prometheus + node exporter + blackbox + alertmanager)
+  hosts: roflan
+  become: yes
+
+  vars_files:
+    - "../roles/prometheus-cluster/vaults/main.yml"
+
+  roles:
+    - { role: ../roles/prometheus-cluster }

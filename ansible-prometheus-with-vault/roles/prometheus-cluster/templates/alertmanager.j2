@@ -1,0 +1,3 @@
+ALERTMANAGER_OPTS="--config.file=/etc/prometheus/alertmanager.yml
+--storage.path=/var/lib/prometheus/alertmanager --web.route-prefix=/
+--web.external-url=http://{{ server_ip  }}/alertmanager/ --log.level=debug"
